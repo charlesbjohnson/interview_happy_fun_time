@@ -2,12 +2,13 @@ require 'test_helper'
 
 module ChapterOne
   class TestSeven < MiniTest::Unit::TestCase
+    include Seven
 
     def test_rows_with_zero_collapse_to_zero
       m = [[1, 0, 0],
            [0, 2, 0],
            [0, 0, 3]]
-      actual = Seven.collapse_on_zero(m)
+      actual = collapse_on_zero(m)
       expected = Array.new(3) { Array.new(3, 0) }
 
       assert_equal(expected, actual)
@@ -17,7 +18,7 @@ module ChapterOne
       m = [[1, 2],
            [3, 0],
            [4, 5]]
-      actual = Seven.collapse_on_zero(m)
+      actual = collapse_on_zero(m)
       expected = [[1, 2],
                   [0, 0],
                   [4, 5]]
@@ -29,7 +30,7 @@ module ChapterOne
       m = [[1],
            [2, 3],
            [4, 5, 6]]
-      actual = Seven.collapse_on_zero(m)
+      actual = collapse_on_zero(m)
 
       assert_equal([], actual)
     end

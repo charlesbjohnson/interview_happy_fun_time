@@ -1,9 +1,9 @@
 module ChapterOne
-  class Seven
+  module Seven
 
     # Write an algorithm such that if an element in an MxN matrix is 0,
     # its entire row and column are set to 0
-    def self.collapse_on_zero(matrix)
+    def collapse_on_zero(matrix)
       column_length = matrix.first.length
       return [] unless matrix.all? { |row| row.length == column_length }
 

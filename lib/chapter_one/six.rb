@@ -1,9 +1,9 @@
 module ChapterOne
-  class Six
+  module Six
 
     # Given an image represented by an NxN matrix, where each pixel in
     # the image is 4 bytes, write a method to rotate the image by 90 degrees
-    def self.rotate(matrix)
+    def rotate(matrix)
       # not a rectangular matrix, fail
       rotated_length = matrix.first.length
       return [] unless matrix.all? { |r| r.length == rotated_length }

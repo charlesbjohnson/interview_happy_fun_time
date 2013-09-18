@@ -1,8 +1,8 @@
 module ChapterOne
-  class One
+  module One
 
     # Implement an algorithm to determine if a string has all unique characters
-    def self.unique_chars?(s)
+    def unique_chars?(s)
       existing_vals = []
       ascii_vals = s.bytes
       result = true

@@ -1,8 +1,8 @@
 module ChapterOne
-  class Two
+  module Two
 
     # Implement a function which reverses a string
-    def self.reverse(s)
+    def reverse(s)
       lo, hi = 0, s.length.pred
       result = s.dup
 

@@ -2,12 +2,13 @@ require 'test_helper'
 
 module ChapterOne
   class SixTest < MiniTest::Unit::TestCase
+    include Six
 
     def test_rotates_square_matrix
       m = [[1, 2, 3],
            [4, 5, 6],
            [7, 8, 9]]
-      actual = Six.rotate(m)
+      actual = rotate(m)
       expected = [[7, 4, 1],
                   [8, 5, 2],
                   [9, 6, 3]]
@@ -19,7 +20,7 @@ module ChapterOne
       m = [[1, 2],
            [3, 4],
            [5, 6]]
-      actual = Six.rotate(m)
+      actual = rotate(m)
       expected = [[5, 3, 1],
                   [6, 4, 2]]
 
@@ -30,7 +31,7 @@ module ChapterOne
       m = [[1],
            [2, 3],
            [4, 5, 6]]
-      actual = Six.rotate(m)
+      actual = rotate(m)
 
       assert_equal([], actual)
     end

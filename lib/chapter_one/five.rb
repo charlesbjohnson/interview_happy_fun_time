@@ -1,5 +1,5 @@
 module ChapterOne
-  class Five
+  module Five
 
     # Implement a method to perform basic string compression using
     # the counts of repeated characters
@@ -7,7 +7,7 @@ module ChapterOne
     # string, return the original string instead
     # Example: aabcccccaaa -> a2b1c5a3
     # Example: abc -> abc
-    def self.compress(s)
+    def compress(s)
       compressed = s.chars
                    .chunk { |c| c }
                    .map { |k, v| k + v.length.to_s }
