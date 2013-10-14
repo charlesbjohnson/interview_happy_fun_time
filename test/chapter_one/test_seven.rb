@@ -1,7 +1,7 @@
-require 'test_helper'
+require 'config_test'
 
 module ChapterOne
-  class TestSeven < MiniTest::Unit::TestCase
+  class TestSeven < Minitest::Test
     include Seven
 
     def test_rows_with_zero_collapse_to_zero

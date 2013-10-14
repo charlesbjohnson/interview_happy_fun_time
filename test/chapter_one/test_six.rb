@@ -1,7 +1,7 @@
-require 'test_helper'
+require 'config_test'
 
 module ChapterOne
-  class SixTest < MiniTest::Unit::TestCase
+  class TestSix < Minitest::Test
     include Six
 
     def test_rotates_square_matrix

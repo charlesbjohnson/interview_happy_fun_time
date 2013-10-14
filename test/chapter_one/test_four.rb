@@ -1,7 +1,7 @@
-require 'test_helper'
+require 'config_test'
 
 module ChapterOne
-  class FourTest < MiniTest::Unit::TestCase
+  class TestFour < Minitest::Test
     include Four
 
     def test_encodes_spaces

@@ -1,5 +1,7 @@
+require 'config_test'
+
 module ChapterOne
-  class TestThree < MiniTest::Unit::TestCase
+  class TestThree < Minitest::Test
     include Three
 
     def test_returns_true_when_is_permutation

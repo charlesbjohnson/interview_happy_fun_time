@@ -4,4 +4,6 @@ ruby '2.0.0'
 
 gem 'rake'
 gem 'minitest'
+gem 'guard-minitest'
+gem 'minitap', github: 'rubyworks/minitap'
 

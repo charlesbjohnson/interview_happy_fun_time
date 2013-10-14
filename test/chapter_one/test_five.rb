@@ -1,7 +1,7 @@
-require 'test_helper'
+require 'config_test'
 
 module ChapterOne
-  class TestFive < MiniTest::Unit::TestCase
+  class TestFive < Minitest::Test
     include Five
 
     def test_compresses_a_string

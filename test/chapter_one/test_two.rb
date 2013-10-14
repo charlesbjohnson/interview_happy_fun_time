@@ -1,5 +1,7 @@
+require 'config_test'
+
 module ChapterOne
-  class TestTwo < MiniTest::Unit::TestCase
+  class TestTwo < Minitest::Test
     include Two
 
     def test_reverses_a_string

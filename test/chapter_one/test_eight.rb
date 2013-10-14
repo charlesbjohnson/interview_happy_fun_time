@@ -1,7 +1,7 @@
-require 'test_helper'
+require 'config_test'
 
 module ChapterOne
-  class TestEight < MiniTest::Unit::TestCase
+  class TestEight < Minitest::Test
     include Eight
 
     def test_returns_true_if_is_rotation

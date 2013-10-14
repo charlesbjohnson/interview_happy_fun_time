@@ -1,7 +1,7 @@
-require 'test_helper'
+require 'config_test'
 
 module ChapterOne
-  class TestOne < MiniTest::Unit::TestCase
+  class TestOne < Minitest::Test
     include One
 
     def test_returns_true_when_all_characters_unique
