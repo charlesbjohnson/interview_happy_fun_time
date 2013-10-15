@@ -1,14 +1,14 @@
 module DataStructures
   class LinkedList
+    include Enumerable
 
     def initialize
-      @size = 0
       @head = Node.new
       @tail = @head
     end
 
     def size
-      @size
+      self.to_a.size
     end
 
     def [](index)
@@ -17,11 +17,22 @@ module DataStructures
       cursor.data if cursor
     end
 
+    def each(&block)
+      enum = Enumerator.new do |y|
+        cursor = @head.next
+        while cursor
+          y << cursor.data
+          cursor = cursor.next
+        end
+      end
+
+      block_given? ? enum.each(&block) : enum
+    end
+
     def append(data)
       @tail.next = Node.new
       @tail = @tail.next
       @tail.data = data
-      @size += 1
     end
 
     def insert(index, data)
@@ -38,7 +49,6 @@ module DataStructures
 
       new = Node.new(data, n: cursor.next)
       cursor.next = new
-      @size += 1
     end
 
     def remove
@@ -50,7 +60,6 @@ module DataStructures
       result = @tail.data
       @tail = cursor
       @tail.next = nil
-      @size -= 1
 
       result
     end
@@ -61,7 +70,6 @@ module DataStructures
       doomed = cursor.next
       cursor.next = doomed.next
       doomed.next = nil
-      @size -= 1
 
       doomed.data
     end

@@ -6,6 +6,7 @@ describe DataStructures::LinkedList do
 
   it { subject.must_respond_to :size }
   it { subject.must_respond_to :[] }
+  it { subject.must_respond_to :each }
   it { subject.must_respond_to :append }
   it { subject.must_respond_to :insert }
   it { subject.must_respond_to :remove }
@@ -144,6 +145,19 @@ describe DataStructures::LinkedList do
       subject[0].must_equal foo
       subject[1].must_equal baz
       subject[2].must_be_nil
+    end
+  end
+
+  describe '#each' do
+    it 'yields each item' do
+      expected = %w[foo bar baz]
+      expected.each { |item| subject.append(item) }
+
+      subject.each.must_be_kind_of(Enumerator)
+
+      actual = []
+      subject.each { |item| actual << item }
+      actual.must_equal expected
     end
   end
 
