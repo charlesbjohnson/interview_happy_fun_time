@@ -12,13 +12,13 @@ describe DataStructures::LinkedList do
   it { subject.must_respond_to :remove }
   it { subject.must_respond_to :delete }
 
+  let(:foo) { 'foo' }
+
   it 'starts out empty' do
     subject.size.must_equal 0
   end
 
   describe '#append' do
-    let(:foo) { 'foo' }
-
     it 'adds to the list' do
       subject.append(foo)
       subject[0].must_equal foo
@@ -39,8 +39,6 @@ describe DataStructures::LinkedList do
   end
 
   describe '#insert' do
-    let(:foo) { 'foo' }
-
     it 'adds to the list' do
       subject.insert(0, foo)
       subject[0].must_equal foo
@@ -78,7 +76,6 @@ describe DataStructures::LinkedList do
   end
 
   describe '#remove' do
-    let(:foo) { 'foo' }
     before { subject.append(foo) }
 
     it 'takes away from the list' do
@@ -105,7 +102,6 @@ describe DataStructures::LinkedList do
   end
 
   describe '#delete' do
-    let(:foo) { 'foo' }
     before { subject.append(foo) }
 
     it 'takes away from the list' do

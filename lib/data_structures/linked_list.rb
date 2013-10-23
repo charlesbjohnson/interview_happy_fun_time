@@ -1,9 +1,11 @@
+require_relative 'single_node'
+
 module DataStructures
   class LinkedList
     include Enumerable
 
     def initialize
-      @head = Node.new
+      @head = SingleNode.new
       @tail = @head
     end
 
@@ -30,7 +32,7 @@ module DataStructures
     end
 
     def append(data)
-      @tail.next = Node.new
+      @tail.next = SingleNode.new
       @tail = @tail.next
       @tail.data = data
     end
@@ -47,7 +49,7 @@ module DataStructures
         i += 1
       end
 
-      new = Node.new(data, n: cursor.next)
+      new = SingleNode.new(data, n: cursor.next)
       cursor.next = new
     end
 
@@ -72,16 +74,6 @@ module DataStructures
       doomed.next = nil
 
       doomed.data
-    end
-
-  end
-
-  class Node
-    attr_accessor :data, :next
-
-    def initialize(d = nil, n: nil)
-      @data = d
-      @next = n
     end
 
   end
