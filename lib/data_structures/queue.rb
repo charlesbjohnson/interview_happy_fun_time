@@ -37,6 +37,8 @@ module DataStructures
     end
 
     def dequeue
+      return nil if @head.next.nil?
+
       doomed = @head
       @head = doomed.next
       doomed.next = nil

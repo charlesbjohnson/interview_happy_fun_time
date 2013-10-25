@@ -71,6 +71,12 @@ describe DataStructures::Stack do
     it 'returns nil if empty' do
       subject.pop.must_be_nil
     end
+
+    describe 'multiple' do
+      it 'returns nil every time' do
+        3.times { subject.pop.must_be_nil }
+      end
+    end
   end
 
   describe '#each' do

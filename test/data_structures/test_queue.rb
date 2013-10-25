@@ -71,6 +71,12 @@ describe DataStructures::Queue do
     it 'returns nil if empty' do
       subject.dequeue.must_be_nil
     end
+
+    describe 'multiple' do
+      it 'returns nil every time' do
+        3.times { subject.dequeue.must_be_nil }
+      end
+    end
   end
 
   describe '#each' do

@@ -34,7 +34,7 @@ module DataStructures
     end
 
     def pop
-      return nil if size.zero?
+      return nil if @head.next.nil?
 
       doomed = @head
       @head = doomed.next
