@@ -44,8 +44,16 @@ module DataStructures
 
     def min
       return nil if @root.nil?
+
       min = r_min(@root)
       [min.key, min.value]
+    end
+
+    def max
+      return nil if @root.nil?
+
+      max = r_max(@root)
+      [max.key, max.value]
     end
 
     def put(key, value)
@@ -53,7 +61,13 @@ module DataStructures
     end
 
     def delete_min
+      return if @root.nil?
       @root = r_delete_min(@root)
+    end
+
+    def delete_max
+      return if @root.nil?
+      @root = r_delete_max(@root)
     end
 
     def delete(key)
@@ -111,11 +125,24 @@ module DataStructures
       r_min(cursor.left)
     end
 
+    def r_max(cursor)
+      return cursor if cursor.right.nil?
+      r_max(cursor.right)
+    end
+
     def r_delete_min(cursor)
-      return if cursor.nil?
       return cursor.right if cursor.left.nil?
 
       cursor.left = r_delete_min(cursor.left)
+
+      cursor.count = 1 + r_size(cursor.left) + r_size(cursor.right)
+      cursor
+    end
+
+    def r_delete_max(cursor)
+      return cursor.left if cursor.right.nil?
+
+      cursor.right = r_delete_max(cursor.right)
 
       cursor.count = 1 + r_size(cursor.left) + r_size(cursor.right)
       cursor
@@ -131,10 +158,10 @@ module DataStructures
       else
         return cursor.left if cursor.right.nil?
 
-        new = cursor
-        cursor = r_min(new.right)
-        cursor.right = r_delete_min(new.right)
-        cursor.left = new.left
+        doomed = cursor
+        cursor = r_min(doomed.right)
+        cursor.right = r_delete_min(doomed.right)
+        cursor.left = doomed.left
       end
 
       cursor.count = 1 + r_size(cursor.left) + r_size(cursor.right)

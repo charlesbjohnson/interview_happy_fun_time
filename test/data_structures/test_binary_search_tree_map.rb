@@ -8,8 +8,10 @@ describe DataStructures::BinarySearchTreeMap do
   it { subject.must_respond_to :each }
   it { subject.must_respond_to :get }
   it { subject.must_respond_to :min }
+  it { subject.must_respond_to :max }
   it { subject.must_respond_to :put }
   it { subject.must_respond_to :delete_min }
+  it { subject.must_respond_to :delete_max }
   it { subject.must_respond_to :delete }
 
   let(:key) { :key }
@@ -38,6 +40,23 @@ describe DataStructures::BinarySearchTreeMap do
     describe 'empty' do
       it 'returns nil' do
         subject.min.must_be_nil
+      end
+    end
+  end
+
+  describe '#max' do
+    it 'returns the key value pair with the largest key' do
+      a, b = :a, :b
+      subject.put(b, b.to_s)
+      subject.put(a, a.to_s)
+      subject.put(key, val)
+
+      subject.max.must_equal([key, val])
+    end
+
+    describe 'empty' do
+      it 'returns nil' do
+        subject.max.must_be_nil
       end
     end
   end
@@ -137,6 +156,73 @@ describe DataStructures::BinarySearchTreeMap do
         subject.get(b).must_equal b.to_s
         subject.get(key).must_equal val
         subject.get(a).must_be_nil
+        subject.size.must_equal 2
+      end
+    end
+  end
+
+  describe '#delete_max' do
+    it 'deletes the item with the largest key' do
+      a, b = :a, :b
+      subject.put(b, b.to_s)
+      subject.put(a, a.to_s)
+      subject.put(key, val)
+
+      subject.delete_max
+
+      subject.get(a).must_equal a.to_s
+      subject.get(b).must_equal b.to_s
+      subject.get(key).must_be_nil
+      subject.size.must_equal 2
+    end
+
+    describe 'multiple' do
+      it 'deletes the items with the largest keys' do
+        a, b = :a, :b
+        subject.put(b, b.to_s)
+        subject.put(a, a.to_s)
+        subject.put(key, val)
+
+        subject.delete_max
+        subject.delete_max
+
+        subject.get(a).must_equal a.to_s
+        subject.get(b).must_be_nil
+        subject.get(key).must_be_nil
+        subject.size.must_equal 1
+      end
+    end
+
+    describe 'empty' do
+      it 'does nothing' do
+        subject.delete_max
+        subject.size.must_equal 0
+      end
+    end
+
+    describe 'single' do
+      it 'deletes the only item' do
+        subject.put(key, val)
+
+        subject.delete_max
+
+        subject.get(key).must_be_nil
+        subject.size.must_equal 0
+      end
+    end
+
+    describe 'unbalanced' do
+      it 'deletes the item with the largest key' do
+        a, b = :a, :b
+        subject.put(a, a.to_s)
+        subject.put(b, b.to_s)
+        subject.put(key, val)
+
+        subject.delete_max
+
+        subject.get(a).must_equal a.to_s
+        subject.get(b).must_equal b.to_s
+        subject.get(key).must_be_nil
         subject.size.must_equal 2
       end
     end

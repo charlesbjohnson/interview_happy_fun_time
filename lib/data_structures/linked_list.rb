@@ -76,5 +76,21 @@ module DataStructures
       doomed.data
     end
 
+    def index(of)
+      result, index = nil, 0
+      cursor = @head.next
+      while cursor
+        if cursor.data == of
+          result = index
+          break
+        end
+
+        cursor = cursor.next
+        index += 1
+      end
+
+      result
+    end
+
   end
 end

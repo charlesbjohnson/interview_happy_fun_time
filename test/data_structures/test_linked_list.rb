@@ -11,6 +11,7 @@ describe DataStructures::LinkedList do
   it { subject.must_respond_to :insert }
   it { subject.must_respond_to :remove }
   it { subject.must_respond_to :delete }
+  it { subject.must_respond_to :index }
 
   let(:foo) { 'foo' }
 
@@ -154,6 +155,20 @@ describe DataStructures::LinkedList do
       actual = []
       subject.each { |item| actual << item }
       actual.must_equal expected
+    end
+  end
+
+  describe '#index' do
+    it 'returns the index where an item appears' do
+      subject.append('bar')
+      subject.append(foo)
+      subject.append('baz')
+
+      subject.index(foo).must_equal 1
+    end
+
+    it 'returns nil if item does not exist' do
+      subject.index(foo).must_be_nil
     end
   end
 
