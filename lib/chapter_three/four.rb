@@ -42,9 +42,8 @@ module ChapterThree
 
     def move_disk(to)
       if to.stack.peek.nil? || @stack.peek < to.stack.peek
-        to.stack.push(@stack.pop)
-
         report_move(@stack.peek, @index, to.index)
+        to.stack.push(@stack.pop)
       end
     end
 
