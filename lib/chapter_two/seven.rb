@@ -3,6 +3,8 @@ require 'ostruct'
 module ChapterTwo
   module Seven
 
+    # Implement a function to check if a linked list is a
+    # palindrome.
     def palindrome?
       return true unless @head.next
 

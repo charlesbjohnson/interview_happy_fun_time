@@ -2,6 +2,9 @@
 module ChapterTwo
   module Four
 
+    # Write code to partition a linked list around a value x,
+    # such that all nodes less than x come before all nodes
+    # greater than or equal to x.
     def partition_around!(value)
       cursor = @head
       while cursor.next && cursor.next.data != value

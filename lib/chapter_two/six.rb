@@ -2,6 +2,8 @@
 module ChapterTwo
   module Six
 
+    # Given a circular linked list, implement an algorithm
+    # which returns the node at the beginning of the loop.
     def find_loop
       slow, fast = @head.next, @head.next
       while fast && fast.next

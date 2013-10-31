@@ -3,6 +3,14 @@ require 'ostruct'
 module ChapterTwo
   module Five
 
+    # You have two numbers represented by a linked list,
+    # where each node contains a single digit. The digits
+    # are stored in reverse order, such that the 1's digit
+    # is at the head of the list. Write a funciton that adds
+    # the two numbers and returns the sum as a linked list.
+    # FOLLOW UP
+    # Suppose the digits are stored in forward order. Repeat
+    # the above problem.
     def reverse_add_digits(first, second)
       first_i, second_i = reverse_to_i(first), reverse_to_i(second)
       result_i = first_i + second_i

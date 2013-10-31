@@ -3,6 +3,10 @@ require 'data_structures'
 module ChapterThree
   class Two < DataStructures::Stack
 
+    # How would you design a stack which, in addition to
+    # push and pop, also has a function min which returns
+    # the minimum element? Push, pop, and min should all
+    # operate in O(1) time.
     def initialize
       @head = MinNode.new
     end

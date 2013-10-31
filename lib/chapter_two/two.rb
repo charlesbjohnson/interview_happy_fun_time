@@ -3,6 +3,8 @@ require 'ostruct'
 module ChapterTwo
   module Two
 
+    # Implement an algorithm to find the kth to last element
+    # of a singly linked list
     def from_last(index)
       return nil if index < 0 || index > size
 

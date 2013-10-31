@@ -1,6 +1,7 @@
 module ChapterThree
   class Five
 
+    # Implement a MyQueue class which implements a queue using two stacks.
     def initialize
       @enqueue = DataStructures::Stack.new
       @dequeue = DataStructures::Stack.new

@@ -3,6 +3,8 @@
 module ChapterThree
   class One
 
+    # Describe how you could use a single array to implement
+    # three stacks.
     def initialize
       @elements = []
       @pointers = [0, 0, 0]
