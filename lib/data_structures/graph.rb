@@ -26,7 +26,6 @@ module DataStructures
     end
 
     def add_vertex(data)
-      return if data.nil?
       @table.push(GraphNode.new(data))
     end
 
@@ -34,7 +33,6 @@ module DataStructures
       node = @table[from]
       return if node.nil?
 
-      return if to.nil?
       node.adjacent.push(to) unless @table[to].nil?
     end
 

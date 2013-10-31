@@ -56,13 +56,6 @@ describe DataStructures::Graph do
       subject.size_vertices.must_equal 1
       subject.adjacent(0).must_equal []
     end
-
-    describe 'with invalid data' do
-      it 'doesnt create a vertex on nil data' do
-        subject.add_vertex(nil)
-        subject.size_vertices.must_equal 0
-      end
-    end
   end
 
   describe '#add_edge' do
@@ -76,14 +69,6 @@ describe DataStructures::Graph do
     end
 
     describe 'with invalid vertices' do
-      it 'doesnt create an edge on nil vertices' do
-        subject.add_vertex(foo)
-        subject.add_edge(0, nil)
-
-        subject.size_edges.must_equal 0
-        subject.adjacent(0).must_equal []
-      end
-
       it 'doesnt create an edge on nonexistent vertices' do
         subject.add_vertex(foo)
         subject.add_edge(0, 1)
