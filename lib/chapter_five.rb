@@ -1,0 +1,8 @@
+require 'chapter_five/one'
+require 'chapter_five/two'
+require 'chapter_five/three'
+require 'chapter_five/four'
+require 'chapter_five/five'
+require 'chapter_five/six'
+require 'chapter_five/seven'
+require 'chapter_five/eight'
