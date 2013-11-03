@@ -1,6 +1,9 @@
 module ChapterFour
   module Nine
 
+    # You are given a binary tree in which each node contains a value.
+    # Design an algorithm to print all paths which sum to a given value.
+    # The path does not need to start or end at the root or a leaf.
     def paths_to_sum(root, target)
       paths = []
       r_paths_to_sum(root, 0, target, [], paths)

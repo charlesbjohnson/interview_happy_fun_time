@@ -1,6 +1,8 @@
 module ChapterFour
   module Five
 
+    # Implement a function to check if a binary tree is a binary
+    # search tree.
     def binary_search_tree?(root)
       r_binary_search_tree?(root, OpenStruct.new(key: nil))
     end

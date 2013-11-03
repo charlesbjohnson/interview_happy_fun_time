@@ -1,6 +1,10 @@
 module ChapterFour
   module Seven
 
+    # Design an algorithm and write code to find the first common
+    # ancestor of two nods in a binary tree. Avoid storing additional
+    # nodes in a data structure. NOTE: This is not necessarily a
+    # binary search tree.
     def first_ancestor(root, a, b)
       return nil unless r_contains(root, a) && r_contains(root, b)
       r_first_ancestor(root, a, b)
