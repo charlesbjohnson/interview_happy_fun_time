@@ -8,3 +8,4 @@ require 'chapter_eight'
 require 'data_structures'
 
 require 'minitest/autorun'
+require 'mocha/setup'

@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rubyworks/minitap.git
-  revision: 9c48a0c27f92ff9322c5d5eb5e6c143c55c91611
+  revision: a64c4e0cf87d65481a8cabb0242676d02af35e68
   specs:
     minitap (0.4.1)
       minitest
@@ -24,14 +24,17 @@ GEM
     guard-minitest (2.0.0)
       guard (~> 2.0)
       minitest (>= 3.0)
-    json (1.8.0)
+    json (1.8.1)
     listen (2.1.0)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     lumberjack (1.0.4)
+    metaclass (0.0.1)
     method_source (0.8.2)
     minitest (5.0.8)
+    mocha (0.14.0)
+      metaclass (~> 0.0.1)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -54,4 +57,5 @@ DEPENDENCIES
   guard-minitest
   minitap!
   minitest
+  mocha
   rake
