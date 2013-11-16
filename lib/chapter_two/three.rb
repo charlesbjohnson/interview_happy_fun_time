@@ -7,7 +7,6 @@ module ChapterTwo
       node.data = node.next.data
       doomed = node.next
       node.next = doomed.next
-      doomed.next = nil
     end
 
   end

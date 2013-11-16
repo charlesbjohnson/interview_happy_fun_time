@@ -49,8 +49,6 @@ module ChapterTwo
       doomed = cursor.next
       cursor.next = doomed.next
       @tail = cursor if doomed == @tail
-
-      doomed.next = nil
     end
 
   end

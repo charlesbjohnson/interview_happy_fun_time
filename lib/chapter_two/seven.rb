@@ -13,7 +13,7 @@ module ChapterTwo
 
     def r_palindrome?(container, right)
       unless right.next
-        return result = right.data == container.left.data
+        return right.data == container.left.data
       end
 
       result = r_palindrome?(container, right.next)

@@ -49,8 +49,7 @@ module DataStructures
         i += 1
       end
 
-      new = SingleNode.new(data, n: cursor.next)
-      cursor.next = new
+      cursor.next = SingleNode.new(data, n: cursor.next)
     end
 
     def remove
