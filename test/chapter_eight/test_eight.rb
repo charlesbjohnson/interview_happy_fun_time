@@ -21,7 +21,7 @@ module ChapterEight::Eight
 
       it 'starts two white and two black tokens in an X at the center' do
         black = subject.board[3][3], subject.board[4][4]
-        white = subject.board[3][4], subject.board[4][3]
+        white = subject.board[4][3], subject.board[3][4]
         black.all?(&:black?).must_equal true
         white.all?(&:white?).must_equal true
 
@@ -39,34 +39,34 @@ module ChapterEight::Eight
 
     describe '#place_token' do
       it 'puts a token at a position on the board' do
-        subject.place_token(5, 3, :black).must_equal true
-        subject.board[5][3].must_be :black?
+        subject.place_token(3, 5, :black).must_equal true
+        subject.board[3][5].must_be :black?
 
-        subject.place_token(5, 4, :white).must_equal true
-        subject.board[5][4].must_be :white?
+        subject.place_token(4, 5, :white).must_equal true
+        subject.board[4][5].must_be :white?
       end
 
       describe 'flips tokens' do
         it 'horizontally' do
-          subject.board[4][3].must_be :white?
-          subject.place_token(5, 3, :black).must_equal true
+          subject.board[3][4].must_be :white?
+          subject.place_token(3, 5, :black).must_equal true
 
-          subject.board[4][3].must_be :black?
+          subject.board[3][4].must_be :black?
           subject.black.must_equal 4
           subject.white.must_equal 1
         end
 
         it 'vertically' do
           subject.board[3][3].must_be :black?
-          subject.place_token(3, 2, :white).must_equal true
+          subject.place_token(2, 3, :white).must_equal true
 
-          subject.board[3][3].must_be :white?
+          subject.board[2][3].must_be :white?
           subject.white.must_equal 4
           subject.black.must_equal 1
         end
 
         it 'diagonally' do
-          subject.place_token(2, 3, :white).must_equal true
+          subject.place_token(3, 2, :white).must_equal true
           subject.board[3][3].must_be :white?
 
           subject.place_token(2, 2, :black)

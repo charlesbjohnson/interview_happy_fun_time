@@ -29,11 +29,11 @@ module ChapterEight
         count_tokens
       end
 
-      def place_token(c, r, color)
-        return false unless valid_placement(c, r, color) && @remaining > 0
+      def place_token(r, c, color)
+        return false unless valid_placement(r, c, color) && @remaining > 0
 
-        @board[c][r].send(:"#{color}!")
-        flip_tokens(c, r, color)
+        @board[r][c].send(:"#{color}!")
+        flip_tokens(r, c, color)
         count_tokens
 
         true
@@ -41,53 +41,53 @@ module ChapterEight
 
       private
 
-      def valid_placement(c, r, color)
-         position_exists?(c, r) && available_move?(c, r, color)
+      def valid_placement(r, c, color)
+         position_exists?(r, c) && available_move?(r, c, color)
       end
 
-      def position_exists?(c, r)
+      def position_exists?(r, c)
         range = 0...@size
-        range.include?(c) && range.include?(r)
+        range.include?(r) && range.include?(c)
       end
 
-      def available_move?(c, r, color)
+      def available_move?(r, c, color)
         # horizontal, vertical, both diagonals
-        [[-1, 0, 1, 0],
-         [0, -1, 0, 1],
+        [[0, -1, 0, 1],
+         [-1, 0, 1, 0],
          [-1, -1, 1, 1],
-         [-1, 1, 1, -1]].each do |c_dec, r_dec, c_inc, r_inc|
-          return true if scan_direction(c, r, c_dec, r_dec, c_inc, r_inc,
+         [-1, 1, 1, -1]].each do |r_dec, c_dec, r_inc, c_inc|
+          return true if scan_direction(r, c, r_dec, c_dec, r_inc, c_inc,
                                         color).any?
         end
 
         false
       end
 
-      def token_at(c, r)
-        return nil unless position_exists?(c, r)
-        @board[c][r]
+      def token_at(r, c)
+        return nil unless position_exists?(r, c)
+        @board[r][c]
       end
 
-      def flip_tokens(c, r, color)
+      def flip_tokens(r, c, color)
         # horizontal, vertical, both diagonals
-        to_flip = [[-1, 0, 1, 0],
-                   [0, -1, 0, 1],
+        to_flip = [[0, -1, 0, 1],
+                   [-1, 0, 1, 0],
                    [-1, -1, 1, 1],
-                   [-1, 1, 1, -1]].flat_map do |c_dec, r_dec, c_inc, r_inc|
-          scan_direction(c, r, c_dec, r_dec, c_inc, r_inc, color)
+                   [-1, 1, 1, -1]].flat_map do |r_dec, c_dec, r_inc, c_inc|
+          scan_direction(r, c, r_dec, c_dec, r_inc, c_inc, color)
         end
 
-        to_flip.each { |col, row| token_at(col, row).flip! }
+        to_flip.each { |row, col| token_at(row, col).flip! }
       end
 
-      def scan_direction(c, r, c_dec, r_dec, c_inc, r_inc, stop_color)
+      def scan_direction(r, c, r_dec, c_dec, r_inc, c_inc, stop_color)
         result, flip_so_far_dec, flip_so_far_inc = [], [], []
 
-        c_with_dec, r_with_dec = (c + c_dec), (r + r_dec)
-        dec_token = token_at(c_with_dec, r_with_dec)
+        r_with_dec, c_with_dec = (r + r_dec), (c + c_dec)
+        dec_token = token_at(r_with_dec, c_with_dec)
 
-        c_with_inc, r_with_inc = (c + c_inc), (r + r_inc)
-        inc_token = token_at(c_with_inc, r_with_inc)
+        r_with_inc, c_with_inc = (r + r_inc), (c + c_inc)
+        inc_token = token_at(r_with_inc, c_with_inc)
 
         scanning_dec = scanning_inc = true
         while scanning_dec || scanning_inc
@@ -99,9 +99,9 @@ module ChapterEight
               scanning_dec = false
             end
 
-            flip_so_far_dec.push([c_with_dec, r_with_dec])
-            c_with_dec, r_with_dec = (c_with_dec + c_dec), (r_with_dec + r_dec)
-            dec_token = token_at(c_with_dec, r_with_dec)
+            flip_so_far_dec.push([r_with_dec, c_with_dec])
+            r_with_dec, c_with_dec = (r_with_dec + r_dec), (c_with_dec + c_dec)
+            dec_token = token_at(r_with_dec, c_with_dec)
           end
 
           if scanning_inc
@@ -112,9 +112,9 @@ module ChapterEight
               scanning_inc = false
             end
 
-            flip_so_far_inc.push([c_with_inc, r_with_inc])
-            c_with_inc, r_with_inc = (c_with_inc + c_inc), (r_with_inc + r_inc)
-            inc_token = token_at(c_with_inc, r_with_inc)
+            flip_so_far_inc.push([r_with_inc, c_with_inc])
+            r_with_inc, c_with_inc = (r_with_inc + r_inc), (c_with_inc + c_inc)
+            inc_token = token_at(r_with_inc, c_with_inc)
           end
         end
 
