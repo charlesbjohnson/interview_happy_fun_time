@@ -6,6 +6,7 @@ require 'chapter_five'
 require 'chapter_seven'
 require 'chapter_eight'
 require 'chapter_nine'
+require 'chapter_eleven'
 require 'data_structures'
 
 require 'minitest/autorun'
