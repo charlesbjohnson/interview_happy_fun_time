@@ -4,13 +4,13 @@ This chapter is more focused on high level design/architecture than actual
 code. As a result, there isn't any code (although there are some plain
 english descriptions of code). They are:
 
-* [1, stock price data feed](#stock-price-data-feed)
-* [2, social network data structures](#social-network-data-structures)
-* [3, missing integer from billions](#missing-integer-from-billions)
-* [4, duplicate numbers in a large array](#duplicate-numbers-in-a-large-array)
-* [5, web crawler](#web-crawler)
-* [6, duplicate urls](#duplicate-urls)
-* [7, web server cache](#web-server-cache)
+* [1, stock price data feed](#1---stock-price-data-feed)
+* [2, social network data structures](#2---social-network-data-structures)
+* [3, missing integer from billions](#3---missing-integer-from-billions)
+* [4, duplicate numbers in a large array](#4---duplicate-numbers-in-a-large-array)
+* [5, web crawler](#5---web-crawler)
+* [6, duplicate urls](#6---duplicate-urls)
+* [7, web server cache](#7---web-server-cache)
 
 Instead, I've listed the answers to the questions below.
 
@@ -38,7 +38,7 @@ formats if need be through the API layer.
 
 ----------
 
-## 2 - social network data structures
+## 2 - Social Network Data Structures
 > How would you design the data structures for a very large social network like
 Facebook or LinkedIn? Describe how you would design an algorithm to show the
 connection, or path, between two people (e.g., Me -> Bob -> Susan -> Jason -> You).
