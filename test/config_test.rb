@@ -8,6 +8,7 @@ require 'chapter_eight'
 require 'chapter_nine'
 require 'chapter_eleven'
 require 'data_structures'
+require 'algorithms'
 
 require 'minitest/autorun'
 require 'mocha/setup'
