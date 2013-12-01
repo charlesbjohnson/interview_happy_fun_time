@@ -18,3 +18,5 @@ different chunks. Starting from the beginning of each chunk, read a line
 from each chunk, find the minimum of the lines read, append the line
 to the output file, and increment to the next line for the chunk from which
 that line came from. Repeat until the merge is complete.
+
+----------
