@@ -15,12 +15,19 @@ Chapters are broken down as follows:
 * 3 - Stacks and Queues
 * 4 - Trees and Graphs
 * 5 - Bit Manipulation
-* 6 - Brain Teasers
+* 6 - Brain Teasers (skipped)
 * 7 - Mathematics and Probability
 * 8 - Object-Oriented Design
 * 9 - Recursion and Dynamic Programming
 * 10 - Scalability and Memory Limits
 * 11 - Sorting and Searching
+* 12 - Testing (skipped)
+* 13 - C and C++ (skipped)
+* 14 - Java (skipped)
+* 15 - Databases
+* 16 - Threads and Locks (skipped)
+* 17 - Moderate (incomplete)
+* 18 - Hard (incomplete)
 
 Thank you to Robert Sedgewick and Kevin Wayne for the awesome lectures on
 [Coursera](https://www.coursera.org/course/algs4partI) that significantly sped
