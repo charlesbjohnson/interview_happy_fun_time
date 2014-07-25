@@ -1,2 +1,4 @@
 .ruby-version
+.rbenv-version
 .ruby-gemset
+.rbenv-gemsets
