@@ -11,7 +11,7 @@ module ChapterSeven
       queues = [[3, [1]], [5, []], [7, []]]
 
       result = nil
-      0.upto(k) do |i|
+      0.upto(k) do
         possible_minimums = queues.map.with_index do |(_, q), qi|
           [(q.first || LARGE_NUMBER), qi]
         end

@@ -22,10 +22,6 @@ module DataStructures
       result
     end
 
-    private_class_method :new
-
-    private
-
     def self.find_or_create(key, from, left = nil, right = nil)
       return if key.nil?
 
@@ -41,6 +37,7 @@ module DataStructures
       found
     end
 
+    private_class_method :new
   end
 
   class BinaryTreeNode

@@ -184,8 +184,6 @@ module ChapterEight
 
       alias_method :eql?, :==
 
-      private
-
       def self.complement_type(type)
         case type
         when :none
