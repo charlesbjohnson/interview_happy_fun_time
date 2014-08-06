@@ -1,1 +1,2 @@
 require_relative 'graph_processing/depth_first_search'
+require_relative 'graph_processing/depth_first_paths'
