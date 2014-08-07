@@ -1,3 +1,4 @@
 require_relative 'graph_processing/depth_first_search'
 require_relative 'graph_processing/depth_first_paths'
 require_relative 'graph_processing/breadth_first_paths'
+require_relative 'graph_processing/connected_components'
