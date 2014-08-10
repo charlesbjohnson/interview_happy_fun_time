@@ -13,14 +13,14 @@ describe DataStructures::Stack do
   let(:foo) { 'foo' }
 
   it 'starts out empty' do
-    subject.size.must_equal 0
+    subject.size.must_equal(0)
   end
 
   describe '#push' do
     it 'adds to the stack' do
       subject.push(foo)
-      subject.peek.must_equal foo
-      subject.size.must_equal 1
+      subject.peek.must_equal(foo)
+      subject.size.must_equal(1)
     end
 
     it 'adds to the top' do
@@ -28,8 +28,8 @@ describe DataStructures::Stack do
       subject.push('bar')
       subject.push(foo)
 
-      subject.peek.must_equal foo
-      subject.size.must_equal 3
+      subject.peek.must_equal(foo)
+      subject.size.must_equal(3)
     end
   end
 
@@ -38,14 +38,14 @@ describe DataStructures::Stack do
       subject.push('bar')
       subject.push(foo)
 
-      subject.peek.must_equal foo
+      subject.peek.must_equal(foo)
     end
 
     it 'does not remove the item' do
       subject.push(foo)
       subject.peek
 
-      subject.size.must_equal 1
+      subject.size.must_equal(1)
     end
 
     it 'returns nil if empty' do
@@ -58,14 +58,14 @@ describe DataStructures::Stack do
       subject.push('bar')
       subject.push(foo)
 
-      subject.pop.must_equal foo
+      subject.pop.must_equal(foo)
     end
 
     it 'removes the item' do
       subject.push(foo)
       subject.pop
 
-      subject.size.must_equal 0
+      subject.size.must_equal(0)
     end
 
     it 'returns nil if empty' do
@@ -88,7 +88,7 @@ describe DataStructures::Stack do
 
       actual = []
       subject.each { |item| actual << item }
-      actual.must_equal expected
+      actual.must_equal(expected)
     end
   end
 

@@ -11,8 +11,8 @@ describe DataStructures::DirectedGraph do
   it { subject.must_respond_to :reverse }
 
   it 'starts out empty' do
-    subject.size_vertices.must_equal 0
-    subject.size_edges.must_equal 0
+    subject.size_vertices.must_equal(0)
+    subject.size_edges.must_equal(0)
   end
 
   describe '#add_edge' do

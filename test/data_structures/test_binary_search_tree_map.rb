@@ -18,7 +18,7 @@ describe DataStructures::BinarySearchTreeMap do
   let(:val) { 'val' }
 
   it 'starts out empty' do
-    subject.size.must_equal 0
+    subject.size.must_equal(0)
   end
 
   describe '#get' do
@@ -65,8 +65,8 @@ describe DataStructures::BinarySearchTreeMap do
     it 'sets the value for a key' do
       subject.put(key, val)
 
-      subject.get(key).must_equal val
-      subject.size.must_equal 1
+      subject.get(key).must_equal(val)
+      subject.size.must_equal(1)
     end
 
     describe 'existing key' do
@@ -74,8 +74,8 @@ describe DataStructures::BinarySearchTreeMap do
         subject.put(key, 'foo')
         subject.put(key, val)
 
-        subject.get(key).must_equal val
-        subject.size.must_equal 1
+        subject.get(key).must_equal(val)
+        subject.size.must_equal(1)
       end
     end
 
@@ -86,10 +86,10 @@ describe DataStructures::BinarySearchTreeMap do
         subject.put(a, a.to_s)
         subject.put(key, val)
 
-        subject.get(a).must_equal a.to_s
-        subject.get(b).must_equal b.to_s
-        subject.get(key).must_equal val
-        subject.size.must_equal 3
+        subject.get(a).must_equal(a.to_s)
+        subject.get(b).must_equal(b.to_s)
+        subject.get(key).must_equal(val)
+        subject.size.must_equal(3)
       end
     end
   end
@@ -103,10 +103,10 @@ describe DataStructures::BinarySearchTreeMap do
 
       subject.delete_min
 
-      subject.get(b).must_equal b.to_s
-      subject.get(key).must_equal val
+      subject.get(b).must_equal(b.to_s)
+      subject.get(key).must_equal(val)
       subject.get(a).must_be_nil
-      subject.size.must_equal 2
+      subject.size.must_equal(2)
     end
 
     describe 'multiple' do
@@ -119,17 +119,17 @@ describe DataStructures::BinarySearchTreeMap do
         subject.delete_min
         subject.delete_min
 
-        subject.get(key).must_equal val
+        subject.get(key).must_equal(val)
         subject.get(b).must_be_nil
         subject.get(a).must_be_nil
-        subject.size.must_equal 1
+        subject.size.must_equal(1)
       end
     end
 
     describe 'empty' do
       it 'does nothing' do
         subject.delete_min
-        subject.size.must_equal 0
+        subject.size.must_equal(0)
       end
     end
 
@@ -140,7 +140,7 @@ describe DataStructures::BinarySearchTreeMap do
         subject.delete_min
 
         subject.get(key).must_be_nil
-        subject.size.must_equal 0
+        subject.size.must_equal(0)
       end
     end
 
@@ -153,10 +153,10 @@ describe DataStructures::BinarySearchTreeMap do
 
         subject.delete_min
 
-        subject.get(b).must_equal b.to_s
-        subject.get(key).must_equal val
+        subject.get(b).must_equal(b.to_s)
+        subject.get(key).must_equal(val)
         subject.get(a).must_be_nil
-        subject.size.must_equal 2
+        subject.size.must_equal(2)
       end
     end
   end
@@ -170,10 +170,10 @@ describe DataStructures::BinarySearchTreeMap do
 
       subject.delete_max
 
-      subject.get(a).must_equal a.to_s
-      subject.get(b).must_equal b.to_s
+      subject.get(a).must_equal(a.to_s)
+      subject.get(b).must_equal(b.to_s)
       subject.get(key).must_be_nil
-      subject.size.must_equal 2
+      subject.size.must_equal(2)
     end
 
     describe 'multiple' do
@@ -186,17 +186,17 @@ describe DataStructures::BinarySearchTreeMap do
         subject.delete_max
         subject.delete_max
 
-        subject.get(a).must_equal a.to_s
+        subject.get(a).must_equal(a.to_s)
         subject.get(b).must_be_nil
         subject.get(key).must_be_nil
-        subject.size.must_equal 1
+        subject.size.must_equal(1)
       end
     end
 
     describe 'empty' do
       it 'does nothing' do
         subject.delete_max
-        subject.size.must_equal 0
+        subject.size.must_equal(0)
       end
     end
 
@@ -207,7 +207,7 @@ describe DataStructures::BinarySearchTreeMap do
         subject.delete_max
 
         subject.get(key).must_be_nil
-        subject.size.must_equal 0
+        subject.size.must_equal(0)
       end
     end
 
@@ -220,10 +220,10 @@ describe DataStructures::BinarySearchTreeMap do
 
         subject.delete_max
 
-        subject.get(a).must_equal a.to_s
-        subject.get(b).must_equal b.to_s
+        subject.get(a).must_equal(a.to_s)
+        subject.get(b).must_equal(b.to_s)
         subject.get(key).must_be_nil
-        subject.size.must_equal 2
+        subject.size.must_equal(2)
       end
     end
   end
@@ -237,10 +237,10 @@ describe DataStructures::BinarySearchTreeMap do
 
       subject.delete(a)
 
-      subject.get(b).must_equal b.to_s
-      subject.get(key).must_equal val
+      subject.get(b).must_equal(b.to_s)
+      subject.get(key).must_equal(val)
       subject.get(a).must_be_nil
-      subject.size.must_equal 2
+      subject.size.must_equal(2)
     end
 
     describe 'multiple' do
@@ -253,17 +253,17 @@ describe DataStructures::BinarySearchTreeMap do
         subject.delete(b)
         subject.delete(a)
 
-        subject.get(key).must_equal val
+        subject.get(key).must_equal(val)
         subject.get(b).must_be_nil
         subject.get(a).must_be_nil
-        subject.size.must_equal 1
+        subject.size.must_equal(1)
       end
     end
 
     describe 'with nonexistent key' do
       it 'does nothing' do
         subject.delete(:a)
-        subject.size.must_equal 0
+        subject.size.must_equal(0)
       end
     end
 
@@ -273,8 +273,8 @@ describe DataStructures::BinarySearchTreeMap do
 
         subject.delete(:a)
 
-        subject.get(key).must_equal val
-        subject.size.must_equal 1
+        subject.get(key).must_equal(val)
+        subject.size.must_equal(1)
       end
     end
 
@@ -285,7 +285,7 @@ describe DataStructures::BinarySearchTreeMap do
         subject.delete(key)
 
         subject.get(key).must_be_nil
-        subject.size.must_equal 0
+        subject.size.must_equal(0)
       end
     end
 
@@ -298,10 +298,10 @@ describe DataStructures::BinarySearchTreeMap do
 
         subject.delete(a)
 
-        subject.get(b).must_equal b.to_s
-        subject.get(key).must_equal val
+        subject.get(b).must_equal(b.to_s)
+        subject.get(key).must_equal(val)
         subject.get(a).must_be_nil
-        subject.size.must_equal 2
+        subject.size.must_equal(2)
       end
     end
   end
@@ -315,7 +315,7 @@ describe DataStructures::BinarySearchTreeMap do
 
       actual = []
       subject.each { |pair| actual << pair }
-      actual.must_equal expected.sort
+      actual.must_equal(expected.sort)
     end
 
     it 'yields each key value pair preorder' do
@@ -326,7 +326,7 @@ describe DataStructures::BinarySearchTreeMap do
 
       actual = []
       subject.each(:pre) { |pair| actual << pair }
-      actual.must_equal expected
+      actual.must_equal(expected)
     end
 
     it 'yields each key value pair postorder' do
@@ -337,7 +337,7 @@ describe DataStructures::BinarySearchTreeMap do
 
       actual = []
       subject.each(:post) { |pair| actual << pair }
-      actual.must_equal [[:a, 1], [:c, 3], [:b, 2]]
+      actual.must_equal([[:a, 1], [:c, 3], [:b, 2]])
     end
   end
 

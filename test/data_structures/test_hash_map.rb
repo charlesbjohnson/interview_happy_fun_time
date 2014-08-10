@@ -14,7 +14,7 @@ describe DataStructures::HashMap do
   let(:val) { 'val' }
 
   it 'starts out empty' do
-    subject.size.must_equal 0
+    subject.size.must_equal(0)
   end
 
   describe '#get' do
@@ -27,8 +27,8 @@ describe DataStructures::HashMap do
     it 'sets the value for a key' do
       subject.put(key, val)
 
-      subject.get(key).must_equal val
-      subject.size.must_equal 1
+      subject.get(key).must_equal(val)
+      subject.size.must_equal(1)
     end
 
     describe 'existing key' do
@@ -36,8 +36,8 @@ describe DataStructures::HashMap do
         subject.put(key, 'foo')
         subject.put(key, val)
 
-        subject.get(key).must_equal val
-        subject.size.must_equal 1
+        subject.get(key).must_equal(val)
+        subject.size.must_equal(1)
       end
     end
 
@@ -46,7 +46,7 @@ describe DataStructures::HashMap do
         1000.times { |i| subject.put(i, i.to_s) }
 
         1000.times { |i| subject.get(i).must_equal(i.to_s) }
-        subject.size.must_equal 1000
+        subject.size.must_equal(1000)
       end
     end
   end
@@ -60,10 +60,10 @@ describe DataStructures::HashMap do
 
       subject.delete(a)
 
-      subject.get(b).must_equal b.to_s
-      subject.get(key).must_equal val
+      subject.get(b).must_equal(b.to_s)
+      subject.get(key).must_equal(val)
       subject.get(a).must_be_nil
-      subject.size.must_equal 2
+      subject.size.must_equal(2)
     end
 
     describe 'multiple' do
@@ -76,17 +76,17 @@ describe DataStructures::HashMap do
         subject.delete(b)
         subject.delete(a)
 
-        subject.get(key).must_equal val
+        subject.get(key).must_equal(val)
         subject.get(b).must_be_nil
         subject.get(a).must_be_nil
-        subject.size.must_equal 1
+        subject.size.must_equal(1)
       end
     end
 
     describe 'with nonexistent key' do
       it 'does nothing' do
         subject.delete(:a)
-        subject.size.must_equal 0
+        subject.size.must_equal(0)
       end
     end
 
@@ -96,8 +96,8 @@ describe DataStructures::HashMap do
 
         subject.delete(:a)
 
-        subject.get(key).must_equal val
-        subject.size.must_equal 1
+        subject.get(key).must_equal(val)
+        subject.size.must_equal(1)
       end
     end
 
@@ -108,7 +108,7 @@ describe DataStructures::HashMap do
         subject.delete(key)
 
         subject.get(key).must_be_nil
-        subject.size.must_equal 0
+        subject.size.must_equal(0)
       end
     end
   end
@@ -122,7 +122,7 @@ describe DataStructures::HashMap do
 
       actual = []
       subject.each { |pair| actual << pair }
-      actual.sort.must_equal expected.sort
+      actual.sort.must_equal(expected.sort)
     end
   end
 
