@@ -13,3 +13,4 @@ require_relative 'data_structures/undirected_graph'
 require_relative 'data_structures/directed_graph'
 
 require_relative 'data_structures/binary_heap_priority_queue'
+require_relative 'data_structures/binary_heap_indexed_priority_queue'
