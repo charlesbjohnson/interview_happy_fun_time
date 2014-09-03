@@ -1,10 +1,15 @@
 module Algorithms
   module Sorting
-    module MergeSort
+    module TopDownMergeSort
 
       def sort(a)
-        return a if a.size <= 1
-        r_merge_sort(a)
+        sort!(a.clone)
+      end
+
+      def sort!(a)
+        # could be more efficient, but chose to take Enumerable'ish approach
+        r_merge_sort(a).each_with_index { |e, i| a[i] = e } unless a.size <= 1
+        a
       end
 
       private
