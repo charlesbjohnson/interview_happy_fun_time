@@ -2,7 +2,8 @@
 
 I've skipped a number of problems that really stumped me, even after having
 taken a quick glance at the solutions for ideas. They are:
-* 11, boolean expression parentheses placement
+
+11. boolean expression parentheses placement
 
 Many of the problems in this chapter (and in others) stumped me but made
 perfect sense after looking at the solution. I've been including code for

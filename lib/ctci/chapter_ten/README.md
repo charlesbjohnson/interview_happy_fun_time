@@ -4,13 +4,13 @@ This chapter is more focused on high level design/architecture than actual
 code. As a result, there isn't any code (although there are some plain
 english descriptions of code). They are:
 
-* [1, stock price data feed](#1---stock-price-data-feed)
-* [2, social network data structures](#2---social-network-data-structures)
-* [3, missing integer from billions](#3---missing-integer-from-billions)
-* [4, duplicate numbers in a large array](#4---duplicate-numbers-in-a-large-array)
-* [5, web crawler](#5---web-crawler)
-* [6, duplicate urls](#6---duplicate-urls)
-* [7, web server cache](#7---web-server-cache)
+1. [stock price data feed](#1---stock-price-data-feed)
+2. [social network data structures](#2---social-network-data-structures)
+3. [missing integer from billions](#3---missing-integer-from-billions)
+4. [duplicate numbers in a large array](#4---duplicate-numbers-in-a-large-array)
+5. [web crawler](#5---web-crawler)
+6. [duplicate urls](#6---duplicate-urls)
+7. [web server cache](#7---web-server-cache)
 
 Instead, I've listed the answers to the questions below.
 

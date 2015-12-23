@@ -1,13 +1,14 @@
 # Sorting and Searching
 
 There is no code for the following problems:
-* [4, sorting strings in a large file](#4---sorting-strings-in-a-large-file)
+
+4. [sorting strings in a large file](#4---sorting-strings-in-a-large-file)
 
 Instead, the description of how to solve the problem is below.
 
 ----------
 
-## 4 - Sorting Strings In a Large File
+## 4. Sorting Strings In a Large File
 > Imagine you have a 20 GB file with one string per line. Explain how you
 would sort the file.
 
