@@ -1,34 +1,17 @@
-#cracking_the_coding_interview
+# interview_happy_fun_time
 
-My collection of solutions to the exercises from the book
-[Cracking the Coding Interview](http://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X)
-by Gayle Laakmann McDowell. Implemented in Ruby and accompanied by a Minitest test
-suite.
+A collection of solutions (with a comprehensive test suite) to interview problems.
 
-This is also a container repo for any CS type problems I think are interesting.
-Examples include data structures, algorithms, and whatever else I can find.
+Includes problems from various sources:
 
-Chapters are broken down as follows:
+- [Cracking the Coding Interview][0].
+- And more...
 
-* 1 - Arrays and Strings
-* 2 - Linked Lists
-* 3 - Stacks and Queues
-* 4 - Trees and Graphs
-* 5 - Bit Manipulation
-* 6 - Brain Teasers (skipped)
-* 7 - Mathematics and Probability
-* 8 - Object-Oriented Design
-* 9 - Recursion and Dynamic Programming
-* 10 - Scalability and Memory Limits
-* 11 - Sorting and Searching
-* 12 - Testing (skipped)
-* 13 - C and C++ (skipped)
-* 14 - Java (skipped)
-* 15 - Databases
-* 16 - Threads and Locks (skipped)
-* 17 - Moderate (incomplete)
-* 18 - Hard (incomplete)
+Also included are reference implementations of specific data structures and algorithms.
+These are based off of the content presented in the [Algorithms][1] class at Princeton,
+which is freely available on Coursera in [two][2] [parts][3].
 
-Thank you to Robert Sedgewick and Kevin Wayne for the awesome lectures on
-[Coursera](https://www.coursera.org/course/algs4partI) that significantly sped
-up the time it took to refresh on some of this stuff.
+[0]: http://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X
+[1]: http://algs4.cs.princeton.edu/home/
+[2]: https://www.coursera.org/course/algs4partI
+[3]: https://www.coursera.org/course/algs4partII
