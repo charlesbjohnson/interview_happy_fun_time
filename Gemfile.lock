@@ -86,6 +86,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  guard
   guard-minitest
   guard-rubocop
   minitest
