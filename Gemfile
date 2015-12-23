@@ -9,6 +9,7 @@ gem 'mocha'
 gem 'pry'
 gem 'pry-byebug'
 gem 'pry-stack_explorer'
+gem 'pry-inline'
 
 gem 'guard-minitest'
 gem 'guard-rubocop'
