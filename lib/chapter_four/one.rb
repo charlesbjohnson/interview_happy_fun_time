@@ -2,7 +2,6 @@
 # and it is still O(N)
 module ChapterFour
   module One
-
     # Implement a function to check if a binary tree is balanced. For
     # the purposes of this question, a balanced tree is defined to be a
     # tree such that the heights of the two subtrees of any node
@@ -10,7 +9,7 @@ module ChapterFour
     def balanced?
       return true if @root.nil?
 
-     (r_height(@root.left, 0) - r_height(@root.right, 0)).abs <= 1
+      (r_height(@root.left, 0) - r_height(@root.right, 0)).abs <= 1
     end
 
     private
@@ -22,6 +21,5 @@ module ChapterFour
       right = r_height(cursor.right, height + 1)
       left > right ? left : right
     end
-
   end
 end

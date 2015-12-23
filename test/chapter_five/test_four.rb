@@ -15,6 +15,5 @@ module ChapterFive
       refute mystery(7)
       assert mystery(8)
     end
-
   end
 end

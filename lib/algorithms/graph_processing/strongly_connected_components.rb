@@ -26,7 +26,7 @@ module Algorithms
         reversed = @graph.reverse
         post = Algorithms::GraphProcessing::DepthFirstOrder.new(reversed).post
 
-        post.reverse.each do |v|
+        post.reverse_each do |v|
           unless @marked[v]
             r_execute(v)
             @count += 1
@@ -41,8 +41,6 @@ module Algorithms
           r_execute(to)
         end
       end
-
     end
   end
 end
-

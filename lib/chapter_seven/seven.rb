@@ -2,7 +2,6 @@
 # Tried to make the solution easily expandable to other primes.
 module ChapterSeven
   module Seven
-
     LARGE_NUMBER = 2**(0.size * 8)
 
     # Design an algorithm to find the kth number such that the
@@ -27,6 +26,5 @@ module ChapterSeven
 
       result
     end
-
   end
 end

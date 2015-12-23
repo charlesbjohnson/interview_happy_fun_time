@@ -26,6 +26,5 @@ module ChapterFive
       @with = 0b0001_0011
       assert_equal 0b0100_0100_1100, overwrite_bits(@overwrite, @with, 2, 6)
     end
-
   end
 end

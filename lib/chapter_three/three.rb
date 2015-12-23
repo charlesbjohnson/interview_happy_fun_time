@@ -2,7 +2,6 @@ require 'data_structures'
 
 module ChapterThree
   class Three
-
     # Imagine a literal stack of plates. If the stack gets
     # too high, it might topple. Therefore, in real life, we
     # would likely start a new stack when the previous stack
@@ -17,7 +16,8 @@ module ChapterThree
     # Implement a function popAt(int index) which performs a pop
     # operation on a specific sub-stack.
     def initialize(max)
-      @max, @stacks = max, []
+      @max = max
+      @stacks = []
     end
 
     def size
@@ -56,16 +56,13 @@ module ChapterThree
     def pop_at(stack_number)
       stack = @stacks[stack_number]
 
-      if stack
-        popped = stack.pop
-        if popped.nil?
-          @stacks.delete_at(stack_number)
-          popped = pop_at(stack_number)
-        end
+      return unless stack
 
-        popped
-      end
+      popped = stack.pop
+      return popped unless popped.nil?
+
+      @stacks.delete_at(stack_number)
+      pop_at(stack_number)
     end
-
   end
 end

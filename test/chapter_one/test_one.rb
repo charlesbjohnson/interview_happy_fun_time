@@ -24,6 +24,5 @@ module ChapterOne
 
       assert_equal(true, result)
     end
-
   end
 end

@@ -3,8 +3,8 @@ module DataStructures
     attr_accessor :data, :next
 
     def initialize(d = nil, n: nil)
-      @data, @next = d, n
+      @data = d
+      @next = n
     end
-
   end
 end

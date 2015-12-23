@@ -1,7 +1,6 @@
 # Argh.
 module ChapterNine
   module Ten
-
     # You have a stack of n boxes, with widths w1, heights h1, and depths d1.
     # The boxes cannot be rotated and can only be stacked on top of one another
     # if each box in the stack is strictly larger than the box above it in
@@ -18,16 +17,16 @@ module ChapterNine
       cached = cache[bottom]
       return cached if cached
 
-      max_height, max_stack = 0, nil
+      max_height = 0
+      max_stack = nil
 
       boxes.each do |box|
-        if box.can_stack_on_top_of(bottom)
-          new_stack = r_tallest_stack(boxes, box, cache)
-          new_height = height(new_stack)
-          if new_height > max_height
-            max_height = new_height
-            max_stack = new_stack
-          end
+        next unless box.can_stack_on_top_of(bottom)
+        new_stack = r_tallest_stack(boxes, box, cache)
+        new_height = height(new_stack)
+        if new_height > max_height
+          max_height = new_height
+          max_stack = new_stack
         end
       end
 
@@ -39,7 +38,7 @@ module ChapterNine
     end
 
     def height(boxes)
-      boxes.reduce(0) { |a, b| a + b.height }
+      boxes.reduce(0) { |a, e| a + e.height }
     end
 
     class Box
@@ -75,8 +74,6 @@ module ChapterNine
       def hash
         [@width, @height, @depth].hash
       end
-
     end
-
   end
 end

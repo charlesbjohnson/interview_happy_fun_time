@@ -2,7 +2,6 @@ require 'ostruct'
 
 module ChapterTwo
   module Seven
-
     # Implement a function to check if a linked list is a
     # palindrome.
     def palindrome?
@@ -12,9 +11,7 @@ module ChapterTwo
     end
 
     def r_palindrome?(container, right)
-      unless right.next
-        return right.data == container.left.data
-      end
+      return right.data == container.left.data unless right.next
 
       result = r_palindrome?(container, right.next)
       if result
@@ -24,6 +21,5 @@ module ChapterTwo
 
       result
     end
-
   end
 end

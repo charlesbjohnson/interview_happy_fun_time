@@ -1,7 +1,6 @@
 module Algorithms
   module Sorting
     module ThreeWayQuickSort
-
       def sort(a)
         sort!(a.clone)
       end
@@ -26,8 +25,8 @@ module Algorithms
         left_i = i = low
         right_i = high
 
-        should_be_left_of_pivot_e = ->{ a[i] < pivot_e }
-        should_be_right_of_pivot_e = ->{ a[i] > pivot_e }
+        should_be_left_of_pivot_e = -> { a[i] < pivot_e }
+        should_be_right_of_pivot_e = -> { a[i] > pivot_e }
 
         until i > right_i
           if should_be_left_of_pivot_e.call
@@ -44,7 +43,6 @@ module Algorithms
 
         [left_i, right_i]
       end
-
     end
   end
 end

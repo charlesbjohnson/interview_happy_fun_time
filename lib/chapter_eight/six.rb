@@ -2,7 +2,6 @@
 # tests than the actual implementation.
 module ChapterEight
   module Six
-
     # Implement a jigsaw puzzle. Design the data structures and explain
     # an algorithm to solve the puzzle. You can assume that you have
     # a fitsWith method which, when passed two puzzle pieces, returns true
@@ -11,7 +10,8 @@ module ChapterEight
       attr_reader :board, :unplaced, :columns, :rows
 
       def initialize(r = 3, c = 3)
-        @rows, @columns = r, c
+        @rows = r
+        @columns = c
         @board = Array.new(@rows) { Array.new(@columns) { Piece.empty } }
         @unplaced = []
 
@@ -40,7 +40,7 @@ module ChapterEight
       end
 
       def around(r, c)
-        %i[above right_of below left_of].map { |m| send(m, r, c) }
+        %i(above right_of below left_of).map { |m| send(m, r, c) }
       end
 
       def above(r, c)
@@ -78,11 +78,10 @@ module ChapterEight
             @unplaced.each_with_index do |p, i|
               compared_edges = p.edges.zip(edges_around_piece)
               piece_fits = compared_edges.all? { |pe, ae| pe.fits_with?(ae) }
-              if piece_fits
-                @board[r][c] = p
-                @unplaced.delete_at(i)
-                break
-              end
+              next unless piece_fits
+              @board[r][c] = p
+              @unplaced.delete_at(i)
+              break
             end
           end
 
@@ -102,7 +101,6 @@ module ChapterEight
           return r, c.pred
         end
       end
-
     end
 
     class Piece
@@ -120,14 +118,14 @@ module ChapterEight
         new(edges_around.map { |e| Edge.complement(e) })
       end
 
-      %i[top right bottom left].each_with_index do |e, i|
+      %i(top right bottom left).each_with_index do |e, i|
         define_method e do
           @edges[i]
         end
       end
 
       def corner?
-        @edges.cycle(2).each_cons(2).any? { |h,t| h == t && h.flat? }
+        @edges.cycle(2).each_cons(2).any? { |h, t| h == t && h.flat? }
       end
 
       def empty?
@@ -140,11 +138,10 @@ module ChapterEight
       end
 
       alias_method :eql?, :==
-
     end
 
     class Edge
-      @@types = %i[none flat inward outward]
+      @@types = %i(none flat inward outward)
       attr_reader :type
 
       def initialize(t)
@@ -187,7 +184,7 @@ module ChapterEight
       def self.complement_type(type)
         case type
         when :none
-          %i[inward outward].sample
+          %i(inward outward).sample
         when :flat
           :flat
         when :inward
@@ -196,8 +193,6 @@ module ChapterEight
           :inward
         end
       end
-
     end
-
   end
 end

@@ -1,6 +1,5 @@
 module ChapterEleven
   module One
-
     # You are given two sorted arrays, A and B, where A has a large enough
     # buffer at the end to hold B. Write a method to merge B into A in sorted
     # order.
@@ -9,10 +8,12 @@ module ChapterEleven
       return a if b.empty?
       return b if a.empty?
 
-      a_i, b_i = a.find_index(&:nil?).pred, b.size.pred
+      a_i = a.find_index(&:nil?).pred
+      b_i = b.size.pred
       cursor_i = a.size.pred
       until a_i < 0 || b_i < 0
-        a_v, b_v = a[a_i], b[b_i]
+        a_v = a[a_i]
+        b_v = b[b_i]
 
         if a_v > b_v
           a[cursor_i] = a_v
@@ -33,6 +34,5 @@ module ChapterEleven
 
       a
     end
-
   end
 end

@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe Algorithms::GraphProcessing::ConnectedComponents do
-
   subject { Algorithms::GraphProcessing::ConnectedComponents.new(graph) }
 
   let(:graph) { DataStructures::UndirectedGraph.new }
@@ -53,5 +52,4 @@ describe Algorithms::GraphProcessing::ConnectedComponents do
       subject.id(12).must_equal(2)
     end
   end
-
 end

@@ -2,7 +2,6 @@
 #   - René Descartes
 module ChapterSeven
   module Three
-
     EPSILON = 0.0001
 
     # Given two lines on a Cartesian plane, determine whether two lines
@@ -13,6 +12,5 @@ module ChapterSeven
 
       slopes_different || y_intercepts_same
     end
-
   end
 end

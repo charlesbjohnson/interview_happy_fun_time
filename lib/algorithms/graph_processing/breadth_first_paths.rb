@@ -1,9 +1,9 @@
 module Algorithms
   module GraphProcessing
     class BreadthFirstPaths
-
       def initialize(graph, source)
-        @graph, @source = graph, source
+        @graph = graph
+        @source = source
         @marked = Array.new(graph.size_vertices) { false }
         @arrive_at_through = Array.new(graph.size_vertices) { 0 }
         execute(source)
@@ -34,12 +34,11 @@ module Algorithms
           to = vertices_to_visit.shift
           @marked[to] = true
           new_vertices = @graph.adjacent(to)
-                               .reject { |v| @marked[v] }
-                               .each { |v| @arrive_at_through[v] = to }
+                         .reject { |v| @marked[v] }
+                         .each { |v| @arrive_at_through[v] = to }
           vertices_to_visit.concat(new_vertices)
         end
       end
-
     end
   end
 end

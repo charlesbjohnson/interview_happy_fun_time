@@ -1,7 +1,6 @@
 module Algorithms
   module Sorting
     module TopDownMergeSort
-
       def sort(a)
         sort!(a.clone)
       end
@@ -17,10 +16,12 @@ module Algorithms
       def r_merge_sort(a)
         return a if a.size == 1
 
-        low, high = 0, a.size
+        low = 0
+        high = a.size
         mid = (low + high) / 2
 
-        left, right = a.take(mid), a.drop(mid)
+        left = a.take(mid)
+        right = a.drop(mid)
 
         left_sorted = r_merge_sort(left)
         right_sorted = r_merge_sort(right)
@@ -50,7 +51,6 @@ module Algorithms
 
         result
       end
-
     end
   end
 end

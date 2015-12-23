@@ -1,7 +1,6 @@
 # Bahh, I really suck at these.
 module ChapterNine
   module Six
-
     # Implement an algorithm to print all valid (e.g., properly opened
     # and closed) combinations of n-pairs of parentheses.
     #
@@ -31,6 +30,5 @@ module ChapterNine
         end
       end
     end
-
   end
 end

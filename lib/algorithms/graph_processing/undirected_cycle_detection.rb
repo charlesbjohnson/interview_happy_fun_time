@@ -49,7 +49,6 @@ module Algorithms
       def cutoff_vertices_until_cycle(path)
         path.drop(path.index(path.last))
       end
-
     end
   end
 end

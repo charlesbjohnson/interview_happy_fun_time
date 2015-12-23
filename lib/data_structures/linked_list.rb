@@ -10,7 +10,7 @@ module DataStructures
     end
 
     def size
-      self.to_a.size
+      to_a.size
     end
 
     def [](index)
@@ -39,11 +39,12 @@ module DataStructures
 
     def insert(index, data)
       if index == size
-        self.append(data)
+        append(data)
         return
       end
 
-      cursor, i = @head, 0
+      cursor = @head
+      i = 0
       while cursor && i < index
         cursor = cursor.next
         i += 1
@@ -54,9 +55,7 @@ module DataStructures
 
     def remove
       cursor = @head
-      until cursor.next == @tail
-        cursor = cursor.next
-      end
+      cursor = cursor.next until cursor.next == @tail
 
       result = @tail.data
       @tail = cursor
@@ -76,7 +75,8 @@ module DataStructures
     end
 
     def index(of)
-      result, index = nil, 0
+      result = nil
+      index = 0
       cursor = @head.next
       while cursor
         if cursor.data == of
@@ -90,6 +90,5 @@ module DataStructures
 
       result
     end
-
   end
 end

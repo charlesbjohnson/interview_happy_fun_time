@@ -28,6 +28,5 @@ module ChapterEleven
     def test_returns_nil_if_empty
       assert_nil index_of('array', [])
     end
-
   end
 end

@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterThree
   class TestThree < Minitest::Test
-
     def setup
       @stack = Three.new(3)
     end
@@ -108,6 +107,5 @@ module ChapterThree
 
       assert_equal 8, @stack.pop_at(1)
     end
-
   end
 end

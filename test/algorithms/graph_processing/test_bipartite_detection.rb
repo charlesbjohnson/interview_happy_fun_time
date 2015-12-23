@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe Algorithms::GraphProcessing::BipartiteDetection do
-
   subject { Algorithms::GraphProcessing::BipartiteDetection.new(graph) }
 
   let(:graph) { DataStructures::UndirectedGraph.new }
@@ -52,5 +51,4 @@ describe Algorithms::GraphProcessing::BipartiteDetection do
       end
     end
   end
-
 end

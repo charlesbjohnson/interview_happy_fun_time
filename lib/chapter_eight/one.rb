@@ -1,6 +1,5 @@
 module ChapterEight
   module One
-
     # Design the data structures for a generic deck of cards. Explain
     # how you would subclass the data structures to implement blackjack.
     #
@@ -26,7 +25,6 @@ module ChapterEight
     # forth. Those are all responsibilities of the game's rules, however, and
     # not of the simple little cards.
     class Deck
-
       def initialize
         shuffle_cards
       end
@@ -51,7 +49,6 @@ module ChapterEight
           (0..12).map { |rank| Card.new(rank, suit) }
         end.shuffle
       end
-
     end
 
     class Card
@@ -59,7 +56,7 @@ module ChapterEight
 
       attr_reader :rank, :suit, :value
 
-      @@suits = %i[hearts spades clubs diamonds]
+      @@suits = %i(hearts spades clubs diamonds)
       @@ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, :jack, :queen, :king, :ace]
 
       def initialize(r, s, v = nil)
@@ -85,8 +82,6 @@ module ChapterEight
       def suit_equal?(other)
         @suit == other.suit
       end
-
     end
-
   end
 end

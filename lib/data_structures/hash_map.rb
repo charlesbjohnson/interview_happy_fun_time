@@ -9,16 +9,12 @@ module DataStructures
       @size = 0
     end
 
-    def size
-      @size
-    end
+    attr_reader :size
 
     def each(&block)
       enum = Enumerator.new do |y|
         @table.each do |c|
-          unless c.nil?
-            c.each { |i| y << i }
-          end
+          c.each { |i| y << i } unless c.nil?
         end
       end
 
@@ -36,11 +32,11 @@ module DataStructures
     def put(key, value)
       chain = @table[hash(key)] ||= LinkedList.new
       found = chain.find { |i| i.first == key }
-      unless found.nil?
-        found[1] = value
-      else
-        chain.append([key,value])
+      if found.nil?
+        chain.append([key, value])
         @size += 1
+      else
+        found[1] = value
       end
     end
 
@@ -62,6 +58,5 @@ module DataStructures
     def hash(key)
       key.hash.abs % @table.size
     end
-
   end
 end

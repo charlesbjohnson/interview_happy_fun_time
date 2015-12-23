@@ -12,7 +12,6 @@
 # Maybe I'm just dumb though.
 module ChapterEleven
   module Seven
-
     # A circus is designing a tower routine consisting of people standing
     # atop one another's shoulders. For practical and aesthetic reasons,
     # each person must be both shorter and lighter than the person below him
@@ -33,7 +32,8 @@ module ChapterEleven
       attr_reader :height, :weight
 
       def initialize(h, w)
-        @height, @weight = h, w
+        @height = h
+        @weight = w
       end
 
       def hash
@@ -66,7 +66,6 @@ module ChapterEleven
 
         0
       end
-
     end
 
     private
@@ -101,6 +100,5 @@ module ChapterEleven
       slimmer = first.weight < second.weight
       shorter && slimmer
     end
-
   end
 end

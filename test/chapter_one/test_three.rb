@@ -29,6 +29,5 @@ module ChapterOne
       assert_equal(false, first_actual)
       assert_equal(false, second_actual)
     end
-
   end
 end

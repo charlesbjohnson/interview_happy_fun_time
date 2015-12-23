@@ -2,19 +2,18 @@ require 'pry'
 require 'config_test'
 
 describe DataStructures::BinaryHeapIndexedPriorityQueue do
-
   subject { DataStructures::BinaryHeapIndexedPriorityQueue.new(priority) }
 
-  let(:priority) { ->(a, b){ a >= b } }
+  let(:priority) { ->(a, b) { a >= b } }
 
   it { subject.must_be_kind_of(Enumerable) }
 
   it { subject.must_respond_to :size }
   it { subject.must_respond_to :each }
   it { subject.must_respond_to :insert }
-  it { subject.must_respond_to :include_index?}
-  it { subject.must_respond_to :include_element?}
-  it { subject.must_respond_to :empty?}
+  it { subject.must_respond_to :include_index? }
+  it { subject.must_respond_to :include_element? }
+  it { subject.must_respond_to :empty? }
   it { subject.must_respond_to :element_at }
   it { subject.must_respond_to :peek_index }
   it { subject.must_respond_to :peek_element }
@@ -69,8 +68,8 @@ describe DataStructures::BinaryHeapIndexedPriorityQueue do
     end
 
     it 'stays the same on #each' do
-      [1,2,3,4].each { |i| subject.insert(i, i) }
-      subject.each { }
+      [1, 2, 3, 4].each { |i| subject.insert(i, i) }
+      subject.each {}
       subject.size.must_equal(4)
     end
   end
@@ -122,7 +121,7 @@ describe DataStructures::BinaryHeapIndexedPriorityQueue do
     end
 
     describe 'with a comparable priority' do
-      let(:priority) { ->(a, b){ a <=> b } }
+      let(:priority) { ->(a, b) { a <=> b } }
 
       before do
         [
@@ -450,7 +449,7 @@ describe DataStructures::BinaryHeapIndexedPriorityQueue do
     end
 
     it 'does not remove any elements' do
-      subject.each { }
+      subject.each {}
       subject.peek_element.must_equal(9)
     end
 
@@ -460,5 +459,4 @@ describe DataStructures::BinaryHeapIndexedPriorityQueue do
       end
     end
   end
-
 end

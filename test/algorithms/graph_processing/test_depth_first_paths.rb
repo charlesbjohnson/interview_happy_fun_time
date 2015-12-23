@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe Algorithms::GraphProcessing::DepthFirstPaths do
-
   subject { Algorithms::GraphProcessing::DepthFirstPaths.new(graph, 0) }
 
   let(:graph) { DataStructures::UndirectedGraph.new }
@@ -104,5 +103,4 @@ describe Algorithms::GraphProcessing::DepthFirstPaths do
       end
     end
   end
-
 end

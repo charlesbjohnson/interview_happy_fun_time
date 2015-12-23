@@ -3,7 +3,6 @@
 # How disappointing.
 module ChapterNine
   module Two
-
     # Imagine a robot sitting on the upper left corner of an X by Y grid.
     # The robot can only move in two directions: right and down. How many
     # possible paths are there for the robot to go from (0,0) to (X,Y)?
@@ -13,12 +12,12 @@ module ChapterNine
     # step on them. Design an algorithm to find a path for the robot from
     # the top left to the bottom right.
     def count_robot_paths_to(target)
-      @paths = {target => 1}
+      @paths = { target => 1 }
       r_count_robot_paths_to([0, 0], target)
 
       # Or even simpler...
-      #x, y = target
-      #(factorial(x + y)) / (factorial(x) * factorial(y))
+      # x, y = target
+      # (factorial(x + y)) / (factorial(x) * factorial(y))
     end
 
     def find_blocked_robot_path(target, obstacles)
@@ -31,9 +30,9 @@ module ChapterNine
 
     private
 
-    #def factorial(n)
-      #(1..n).reduce(:*) || 1
-    #end
+    # def factorial(n)
+    # (1..n).reduce(:*) || 1
+    # end
 
     def r_count_robot_paths_to(cursor, target)
       p = @paths[cursor]
@@ -58,7 +57,8 @@ module ChapterNine
 
       found_a_path = !result.empty?
       cur_x, cur_y = cursor
-      to_up, to_left = [cur_x, cur_y.pred], [cur_x.pred, cur_y]
+      to_up = [cur_x, cur_y.pred]
+      to_left = [cur_x.pred, cur_y]
       can_go_up = cur_y > target.last && !dead_end[to_up]
       can_go_left = cur_x > target.first && !dead_end[to_left]
 
@@ -81,6 +81,5 @@ module ChapterNine
       dead_end[cursor] = !found_a_path
       cursor if cursor == target || found_a_path
     end
-
   end
 end

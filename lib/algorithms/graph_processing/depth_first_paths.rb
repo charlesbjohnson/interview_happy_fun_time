@@ -1,9 +1,9 @@
 module Algorithms
   module GraphProcessing
     class DepthFirstPaths
-
       def initialize(graph, source)
-        @graph, @source = graph, source
+        @graph = graph
+        @source = source
         @marked = Array.new(graph.size_vertices) { false }
         @arrive_at_through = Array.new(graph.size_vertices) { 0 }
         r_execute(source)
@@ -35,8 +35,6 @@ module Algorithms
           r_execute(to)
         end
       end
-
     end
   end
 end
-

@@ -31,6 +31,5 @@ module ChapterOne
 
       assert_equal('', actual)
     end
-
   end
 end

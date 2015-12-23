@@ -1,6 +1,5 @@
 module ChapterFour
   module Three
-
     # Given a sorted (increasing order) array with unique integer elements,
     # write an algorithm to create a binary search tree with minimal height.
     def create_min_height(from)
@@ -23,11 +22,9 @@ module ChapterFour
       r_create_min_height(result, from, low, mid.pred)
       r_create_min_height(result, from, mid.succ, high)
     end
-
   end
 
   module ThreeHelpers
-
     def height
       return -1 if @root.nil?
       r_height(@root, -1)
@@ -42,6 +39,5 @@ module ChapterFour
       right = r_height(cursor.right, height + 1)
       left > right ? left : right
     end
-
   end
 end

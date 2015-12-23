@@ -4,7 +4,9 @@ module DataStructures
 
     def initialize(priority = nil)
       @priority = priority || ->(a, b) { a <=> b }
-      @heap, @elements, @inverse_heap = [nil], [], []
+      @heap = [nil]
+      @elements = []
+      @inverse_heap = []
     end
 
     def initialize_copy(source)
@@ -101,7 +103,7 @@ module DataStructures
     def up_reheapify(index)
       while index > 1 && higher?(index, (index / 2))
         exchange(index, (index / 2))
-        index = index / 2
+        index /= 2
       end
     end
 
@@ -128,8 +130,8 @@ module DataStructures
 
     def exchange(from, to)
       @heap[from], @heap[to] = @heap[to], @heap[from]
-      @inverse_heap[@heap[from]], @inverse_heap[@heap[to]] = from, to
+      @inverse_heap[@heap[from]] = from
+      @inverse_heap[@heap[to]] = to
     end
-
   end
 end

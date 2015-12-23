@@ -1,6 +1,5 @@
 module ChapterEleven
   module Three
-
     # Given a sorted array of n integers that has been rotated an unknown
     # number of times, write code to find an element in the array. You may
     # assume that the array was originally sorted in increasing order.
@@ -9,8 +8,10 @@ module ChapterEleven
 
       result = nil
 
-      min_i, size = a.index(a.min),  a.size
-      low_i, high_i = 0, size.pred
+      min_i = a.index(a.min)
+      size = a.size
+      low_i = 0
+      high_i = size.pred
       until low_i > high_i
         mid_i = (low_i + high_i) / 2
         actual_mid_i = (min_i + mid_i) % size
@@ -29,6 +30,5 @@ module ChapterEleven
 
       result
     end
-
   end
 end

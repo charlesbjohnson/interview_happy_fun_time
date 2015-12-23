@@ -1,6 +1,5 @@
 module ChapterNine
   module Three
-
     # A magic index in an array A[0...n-1] is defined to be an index such
     # that A[i] = i. Given a sorted array of distinct integers, write a method
     # to find a magic index, if one exists, in array A.
@@ -20,9 +19,9 @@ module ChapterNine
       at_mid = a[mid]
       return mid if at_mid == mid
 
-      max_left, min_right = [at_mid, mid.pred].min, [at_mid, mid.succ].max
+      max_left = [at_mid, mid.pred].min
+      min_right = [at_mid, mid.succ].max
       r_magic_index(a, low, max_left) || r_magic_index(a, min_right, high)
     end
-
   end
 end

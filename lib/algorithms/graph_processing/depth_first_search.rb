@@ -23,7 +23,6 @@ module Algorithms
           r_execute(to) unless @marked[to]
         end
       end
-
     end
   end
 end

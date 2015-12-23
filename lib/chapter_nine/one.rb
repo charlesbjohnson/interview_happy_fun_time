@@ -1,6 +1,5 @@
 module ChapterNine
   module One
-
     @cache = [1]
 
     # A child is running up a staircase with n steps, and can hop either 1
@@ -17,6 +16,5 @@ module ChapterNine
       three = count_ways_to_skip_steps(steps - 3)
       @cache[steps] = one + two + three
     end
-
   end
 end

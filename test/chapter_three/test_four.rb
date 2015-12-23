@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterThree
   class TestFour < Minitest::Test
-
     def setup
       @hanoi = Four.new
     end
@@ -39,11 +38,9 @@ module ChapterThree
       assert_equal 0, @hanoi.tower(1)
       assert_equal 3, @hanoi.tower(2)
     end
-
   end
 
   class TestTower < Minitest::Test
-
     def test_move_ring_to_empty
       @from = Tower.new(0, 1)
       @to = Tower.new(1, 0)
@@ -79,6 +76,5 @@ module ChapterThree
       assert_equal 2, @from.stack.peek
       assert_equal 1, @to.stack.peek
     end
-
   end
 end

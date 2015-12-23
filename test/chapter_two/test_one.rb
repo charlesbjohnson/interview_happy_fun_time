@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterTwo
   class TestOne < Minitest::Test
-
     class DataStructures::LinkedList
       include One
     end
@@ -38,6 +37,5 @@ module ChapterTwo
       assert_equal(0, list.size)
       assert_equal(nil, list[0])
     end
-
   end
 end

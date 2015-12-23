@@ -8,7 +8,10 @@ module DataStructures
       nodes = []
       keys.each do |rt, c|
         l = r = nil
-        l, r = c[0], c[1] unless c.nil?
+        unless c.nil?
+          l = c[0]
+          r = c[1]
+        end
         left = find_or_create(l, nodes)
         right = find_or_create(r, nodes)
 
@@ -44,9 +47,10 @@ module DataStructures
     attr_accessor :key, :value, :left, :right
 
     def initialize(k, l = nil, r = nil)
-      @key, @value = k, k.to_s
-      @left, @right = l, r
+      @key = k
+      @value = k.to_s
+      @left = l
+      @right = r
     end
-
   end
 end

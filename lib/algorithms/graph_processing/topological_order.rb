@@ -1,7 +1,6 @@
 module Algorithms
   module GraphProcessing
     class TopologicalOrder
-
       def initialize(graph)
         @graph = graph
       end
@@ -14,7 +13,6 @@ module Algorithms
         return unless acyclic?
         @order ||= Algorithms::GraphProcessing::DepthFirstOrder.new(@graph).post.reverse
       end
-
     end
   end
 end

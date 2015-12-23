@@ -19,6 +19,5 @@ module ChapterNine
       assert_empty parentheses_combinations(0)
       assert_empty parentheses_combinations(-5)
     end
-
   end
 end

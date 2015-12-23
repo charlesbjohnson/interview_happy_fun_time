@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterTwo
   class TestSix < Minitest::Test
-
     class DataStructures::LinkedList
       include Six
     end
@@ -65,6 +64,5 @@ module ChapterTwo
       tail.next = head
       head
     end
-
   end
 end

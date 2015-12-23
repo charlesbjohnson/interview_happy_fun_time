@@ -13,6 +13,5 @@ module ChapterSeven
     def test_returns_nil_on_invalid
       assert_nil kth_number_with_prime_factors(-3)
     end
-
   end
 end

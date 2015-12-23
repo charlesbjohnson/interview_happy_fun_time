@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe Algorithms::GraphProcessing::StronglyConnectedComponents do
-
   subject { Algorithms::GraphProcessing::StronglyConnectedComponents.new(graph) }
 
   let(:graph) { DataStructures::DirectedGraph.new }
@@ -63,5 +62,4 @@ describe Algorithms::GraphProcessing::StronglyConnectedComponents do
       subject.id(7).must_equal(4)
     end
   end
-
 end

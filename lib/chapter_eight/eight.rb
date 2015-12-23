@@ -1,6 +1,5 @@
 module ChapterEight
   module Eight
-
     # Othello is played as follows: Each Othello piece is white on one side
     # and black on the other. When a piece is surrounded by its opponents on
     # both the left and right sides, or both the top and bottom, it is said
@@ -20,7 +19,8 @@ module ChapterEight
       end
 
       def start
-        min, max = (@size.pred / 2), (@size / 2)
+        min = (@size.pred / 2)
+        max = (@size / 2)
         @board[min][min].black!
         @board[max][max].black!
         @board[min][max].white!
@@ -42,7 +42,7 @@ module ChapterEight
       private
 
       def valid_placement(r, c, color)
-         position_exists?(r, c) && available_move?(r, c, color)
+        position_exists?(r, c) && available_move?(r, c, color)
       end
 
       def position_exists?(r, c)
@@ -81,12 +81,16 @@ module ChapterEight
       end
 
       def scan_direction(r, c, r_dec, c_dec, r_inc, c_inc, stop_color)
-        result, flip_so_far_dec, flip_so_far_inc = [], [], []
+        result = []
+        flip_so_far_dec = []
+        flip_so_far_inc = []
 
-        r_with_dec, c_with_dec = (r + r_dec), (c + c_dec)
+        r_with_dec = (r + r_dec)
+        c_with_dec = (c + c_dec)
         dec_token = token_at(r_with_dec, c_with_dec)
 
-        r_with_inc, c_with_inc = (r + r_inc), (c + c_inc)
+        r_with_inc = (r + r_inc)
+        c_with_inc = (c + c_inc)
         inc_token = token_at(r_with_inc, c_with_inc)
 
         scanning_dec = scanning_inc = true
@@ -100,22 +104,23 @@ module ChapterEight
             end
 
             flip_so_far_dec.push([r_with_dec, c_with_dec])
-            r_with_dec, c_with_dec = (r_with_dec + r_dec), (c_with_dec + c_dec)
+            r_with_dec = (r_with_dec + r_dec)
+            c_with_dec = (c_with_dec + c_dec)
             dec_token = token_at(r_with_dec, c_with_dec)
           end
 
-          if scanning_inc
-            scanning_inc = false if inc_token.nil?
+          next unless scanning_inc
+          scanning_inc = false if inc_token.nil?
 
-            if inc_token && inc_token.color == stop_color
-              result.concat(flip_so_far_inc)
-              scanning_inc = false
-            end
-
-            flip_so_far_inc.push([r_with_inc, c_with_inc])
-            r_with_inc, c_with_inc = (r_with_inc + r_inc), (c_with_inc + c_inc)
-            inc_token = token_at(r_with_inc, c_with_inc)
+          if inc_token && inc_token.color == stop_color
+            result.concat(flip_so_far_inc)
+            scanning_inc = false
           end
+
+          flip_so_far_inc.push([r_with_inc, c_with_inc])
+          r_with_inc = (r_with_inc + r_inc)
+          c_with_inc = (c_with_inc + c_inc)
+          inc_token = token_at(r_with_inc, c_with_inc)
         end
 
         result
@@ -123,15 +128,14 @@ module ChapterEight
 
       def count_tokens
         tokens = @board.flatten
-        @remaining = tokens.count { |t| t.none? }
-        @black = tokens.count { |t| t.black? }
-        @white = tokens.count { |t| t.white? }
+        @remaining = tokens.count(&:none?)
+        @black = tokens.count(&:black?)
+        @white = tokens.count(&:white?)
       end
-
     end
 
     class Token
-      @@k_to_v = {0 => :none, -1 => :black, 1 => :white}
+      @@k_to_v = { 0 => :none, -1 => :black, 1 => :white }
       @@v_to_k = @@k_to_v.invert
       @@colors = @@k_to_v.values
       attr_reader :color
@@ -145,9 +149,12 @@ module ChapterEight
       end
 
       @@k_to_v.each do |k, v|
-        self.define_singleton_method(v) { new(k) }
-        define_method(:"#{v}!") { @color = v; self }
+        define_singleton_method(v) { new(k) }
         define_method(:"#{v}?") { @color == v }
+        define_method(:"#{v}!") do
+          @color = v
+          self
+        end
       end
 
       def flip!
@@ -162,8 +169,6 @@ module ChapterEight
       end
 
       alias_method :eql?, :==
-
     end
-
   end
 end

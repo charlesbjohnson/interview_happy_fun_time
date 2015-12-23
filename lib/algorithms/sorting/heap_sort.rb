@@ -1,7 +1,6 @@
 module Algorithms
   module Sorting
     module HeapSort
-
       def sort(a)
         sort!(a.clone)
       end
@@ -21,7 +20,8 @@ module Algorithms
       end
 
       def setup_heap(a)
-        last_root_i, trunk_i = (a.size / 2), 1
+        last_root_i = (a.size / 2)
+        trunk_i = 1
         last_root_i.downto(trunk_i) { |i| down_reheapify(i, a, a.size) }
       end
 
@@ -61,7 +61,6 @@ module Algorithms
         exchange(1, size, a)
         down_reheapify(1, a, size.pred)
       end
-
     end
   end
 end

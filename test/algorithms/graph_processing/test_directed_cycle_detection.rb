@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe Algorithms::GraphProcessing::DirectedCycleDetection do
-
   subject { Algorithms::GraphProcessing::DirectedCycleDetection.new(graph) }
 
   let(:graph) { DataStructures::DirectedGraph.new }
@@ -87,5 +86,4 @@ describe Algorithms::GraphProcessing::DirectedCycleDetection do
       end
     end
   end
-
 end

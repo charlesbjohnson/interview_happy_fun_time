@@ -25,7 +25,6 @@ module Algorithms
       def test_returns_nil_when_empty_array
         assert_nil(select(3, []))
       end
-
     end
   end
 end

@@ -38,6 +38,5 @@ module ChapterEleven
     def test_returns_zero_if_empty
       assert_equal 0, @ranker.rank_for(3)
     end
-
   end
 end

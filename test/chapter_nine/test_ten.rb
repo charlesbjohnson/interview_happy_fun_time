@@ -13,7 +13,7 @@ module ChapterNine
     end
 
     def test_returns_tallest_of_unstackable_boxes
-      boxes = Array.new(3) { Box.new(2, 2, 2)}
+      boxes = Array.new(3) { Box.new(2, 2, 2) }
 
       expected = [Box.new(2, 2, 2)]
       assert_equal expected, tallest_stack(boxes)
@@ -22,6 +22,5 @@ module ChapterNine
     def test_returns_empty_when_empty
       assert_empty tallest_stack([])
     end
-
   end
 end

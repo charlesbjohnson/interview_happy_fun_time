@@ -2,7 +2,6 @@ require 'observer'
 
 module ChapterEight
   module Two
-
     # Imagine you have a call center with three levels of employees:
     # respondent, manager, and director. An incoming telephone call must
     # be first allocated to a respondent who is free. If the respondent can't
@@ -12,10 +11,9 @@ module ChapterEight
     # this problem. Implement a method dispatchCall() which assigns a call
     # to the first available employee.
     class CallCenter
-
       def initialize
         @staff = Hash[StaffMember.roles.map do |r|
-          [r, {available: [], unavailable: []}]
+          [r, { available: [], unavailable: [] }]
         end]
         @wait_list = []
       end
@@ -66,7 +64,6 @@ module ChapterEight
         unavailable.delete(staff_member)
         available.push(staff_member)
       end
-
     end
 
     class Call
@@ -92,7 +89,6 @@ module ChapterEight
       def escalate_issue
         @level += 1 if @level < 2
       end
-
     end
 
     class StaffMember
@@ -119,7 +115,7 @@ module ChapterEight
       end
 
       class << self
-        @@roles = %i[respondent manager director].freeze
+        @@roles = %i(respondent manager director).freeze
 
         @@roles.each do |r|
           define_method r do
@@ -140,8 +136,6 @@ module ChapterEight
         changed
         notify_observers(member, call)
       end
-
     end
-
   end
 end

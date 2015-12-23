@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterTwo
   class TestFour < Minitest::Test
-
     class DataStructures::LinkedList
       include Four
     end
@@ -42,18 +41,18 @@ module ChapterTwo
 
     def test_partition_around_grouped_duplicates
       @list = DataStructures::LinkedList.new
-      [2,1].each { |n| @list.append(n) }
+      [2, 1].each { |n| @list.append(n) }
       2.times { @list.append(3) }
-      [4,3,5].each { |n| @list.append(n) }
+      [4, 3, 5].each { |n| @list.append(n) }
 
       @list.partition_around!(3)
-      expected = [1,2,3,3,3,4,5]
+      expected = [1, 2, 3, 3, 3, 4, 5]
       assert_equal expected, @list.to_a
     end
 
     def test_partion_around_sorted
       @list = DataStructures::LinkedList.new
-      expected = [1,2,3,4,5]
+      expected = [1, 2, 3, 4, 5]
       expected.each { |n| @list.append(n) }
 
       @list.partition_around!(3)
@@ -91,6 +90,5 @@ module ChapterTwo
 
       result.all?
     end
-
   end
 end

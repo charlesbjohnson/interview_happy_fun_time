@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterThree
   class TestOne < Minitest::Test
-
     def setup
       @triple_stack = One.new
     end
@@ -112,6 +111,5 @@ module ChapterThree
       assert_equal 2, @triple_stack.pop(0)
       assert_equal 0, @triple_stack.size(0)
     end
-
   end
 end

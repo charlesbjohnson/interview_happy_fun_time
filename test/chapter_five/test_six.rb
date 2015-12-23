@@ -12,6 +12,5 @@ module ChapterFive
     def test_returns_zero_for_zero
       assert_equal 0b0, swap_even_odd_bits(0b0)
     end
-
   end
 end

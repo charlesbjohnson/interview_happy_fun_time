@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterSeven
   class TestFour < Minitest::Test
-
     # Not entirely sure why I can't do the usual
     # class Fixnum
     #   include Four
@@ -37,6 +36,5 @@ module ChapterSeven
       assert_equal 0, 0.divide(-2)
       assert_raises(RuntimeError) { 5.divide(0) }
     end
-
   end
 end

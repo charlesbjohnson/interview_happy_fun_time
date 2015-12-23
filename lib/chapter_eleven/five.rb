@@ -1,6 +1,5 @@
 module ChapterEleven
   module Five
-
     # Given a sorted array of strings which is interspersed with empty
     # strings, write a method to find the location of a given string.
     #
@@ -11,7 +10,8 @@ module ChapterEleven
     def index_of(s, a)
       result = nil
 
-      low_i, high_i = 0, a.size.pred
+      low_i = 0
+      high_i = a.size.pred
       until low_i > high_i
         mid_i = (low_i + high_i) / 2
         mid_v = a[mid_i]
@@ -40,7 +40,8 @@ module ChapterEleven
     private
 
     def closest_non_empty_from(i, a)
-      left, right = i.pred, i.succ
+      left = i.pred
+      right = i.succ
       go_left = go_right = true
       while go_left || go_right
         go_left = false if left < 0
@@ -53,6 +54,5 @@ module ChapterEleven
         right = right.succ if go_right
       end
     end
-
   end
 end

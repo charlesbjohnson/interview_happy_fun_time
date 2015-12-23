@@ -1,6 +1,5 @@
 module ChapterTwo
   module Three
-
     # Implement an algorithm to delete a node in the middle
     # of a single linked list, given only access to that node.
     def delete_node(node)
@@ -8,6 +7,5 @@ module ChapterTwo
       doomed = node.next
       node.next = doomed.next
     end
-
   end
 end

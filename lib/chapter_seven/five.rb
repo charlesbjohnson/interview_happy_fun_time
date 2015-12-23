@@ -1,7 +1,6 @@
 # Another ridiculously length one.
 module ChapterSeven
   module Five
-
     # Given two squares on a two-dimensional plane, find a line that
     # would cut these two squares in half. Assume that the top and the
     # bottom sides of the square run parallel to the x-axis
@@ -42,16 +41,16 @@ module ChapterSeven
     end
 
     class Square
-      @@sqr = Struct.new(*%i[top_left top_right bottom_left bottom_right])
+      @@sqr = Struct.new(*%i(top_left top_right bottom_left bottom_right))
       def self.new(points)
-       @@sqr.new(*points.map { |p| Point.new(p) })
+        @@sqr.new(*points.map { |p| Point.new(p) })
       end
     end
 
     class Line
       @@ln = Struct.new(:slope, :y_intercept)
       def self.new(slp, yint)
-         @@ln.new(slp, yint)
+        @@ln.new(slp, yint)
       end
     end
 
@@ -119,9 +118,9 @@ module ChapterSeven
 
     def farthest(points)
       comparisons(points).map { |fp, tp| [distance(fp, tp), [fp, tp]] }
-                         .sort_by { |e| e.first }
-                         .last
-                         .last
+        .sort_by(&:first)
+        .last
+        .last
     end
 
     def comparisons(points)
@@ -140,6 +139,5 @@ module ChapterSeven
       y_distance = from.y - to.y
       Math.sqrt(x_distance**2 + y_distance**2)
     end
-
   end
 end

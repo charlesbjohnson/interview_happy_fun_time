@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe Algorithms::GraphProcessing::TopologicalOrder do
-
   subject { Algorithms::GraphProcessing::TopologicalOrder.new(graph) }
 
   let(:graph) { DataStructures::DirectedGraph.new }
@@ -81,5 +80,4 @@ describe Algorithms::GraphProcessing::TopologicalOrder do
       end
     end
   end
-
 end

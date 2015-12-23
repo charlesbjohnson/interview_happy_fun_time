@@ -1,6 +1,5 @@
 module DataStructures
   class UndirectedGraph
-
     def initialize
       @table = []
       @edge_length = 0
@@ -15,7 +14,7 @@ module DataStructures
     end
 
     def add_edge(from, to)
-      return false unless [from, to].all? { |i| i.kind_of?(Numeric) }
+      return false unless [from, to].all? { |i| i.is_a?(Numeric) }
       return false if [from, to].any? { |i| i < 0 }
 
       from_vertex = @table[from] ||= []
@@ -28,10 +27,8 @@ module DataStructures
     end
 
     def adjacent(target)
-      return unless target.kind_of?(Numeric) && target >= 0
+      return unless target.is_a?(Numeric) && target >= 0
       @table[target].to_a.clone
     end
-
   end
 end
-

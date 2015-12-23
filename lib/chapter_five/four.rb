@@ -1,6 +1,5 @@
 module ChapterFive
   module Four
-
     # Explain what the following code does: ((n & (n - 1)) == 0)
     #
     # My answer was that it determines if there is only a single
@@ -12,6 +11,5 @@ module ChapterFive
     def mystery(n)
       (n & (n - 1)).zero?
     end
-
   end
 end

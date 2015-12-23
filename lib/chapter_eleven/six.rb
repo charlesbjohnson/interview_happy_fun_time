@@ -1,12 +1,13 @@
 module ChapterEleven
   module Six
-
     # Given an M x N matrix in which each row and each column is stored in
     # ascending order, write a method to find an element.
     def locate_in_matrix(e, m)
       return nil if m.empty? || m.all?(&:empty?)
 
-      row, rows, column = 0, m.size.pred, m.first.size.pred
+      row = 0
+      rows = m.size.pred
+      column = m.first.size.pred
       until row > rows || column < 0
         column = binary_search_approximate(e, m[row], column)
         item = m[row][column]
@@ -41,6 +42,5 @@ module ChapterEleven
 
       mid
     end
-
   end
 end

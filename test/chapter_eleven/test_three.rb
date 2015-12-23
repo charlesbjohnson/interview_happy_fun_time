@@ -15,6 +15,5 @@ module ChapterEleven
     def test_returns_nil_if_not_in_array
       assert_nil search_rotated_array(3, [])
     end
-
   end
 end

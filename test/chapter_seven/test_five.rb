@@ -66,7 +66,7 @@ module ChapterSeven
       second = Square.new([[2.0, 2.0], [5.0, 2.0],
                            [2.0, 5.0], [5.0, 5.0]])
       assert_equal [Point.new([2.0, 3.5]), Point.new([5.0, 3.5])],
-                    find_half_of_squares_line(first, second)
+                   find_half_of_squares_line(first, second)
     end
 
     def test_returns_line_segment_when_encompassing
@@ -80,7 +80,6 @@ module ChapterSeven
       smaller, larger = larger, smaller
       assert_equal [Point.new([0.0, 3.5]), Point.new([7.0, 3.5])],
                    find_half_of_squares_line(smaller, larger)
-
     end
 
     def test_returns_line_segment_when_negative
@@ -92,6 +91,5 @@ module ChapterSeven
       assert_equal [Point.new([-6.0, -2.4375]), Point.new([5.0, 4.4375])],
                    find_half_of_squares_line(top_left, bottom_right)
     end
-
   end
 end

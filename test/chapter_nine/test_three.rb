@@ -45,6 +45,5 @@ module ChapterNine
     def test_returns_nil_if_magic_index_doesnt_exist_duplicates_even_size
       assert_nil magic_index([-5, -5, 1, 1, 2, 2, 3, 9])
     end
-
   end
 end

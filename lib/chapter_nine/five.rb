@@ -1,9 +1,9 @@
 module ChapterNine
   module Five
-
     # Write a method to compute all permutations of a string
     def permutations(string)
-      result, buffer = [''], []
+      result = ['']
+      buffer = []
       string.chars.each do |c|
         until result.empty?
           to_permute = result.pop
@@ -30,6 +30,5 @@ module ChapterNine
         p.join
       end
     end
-
   end
 end

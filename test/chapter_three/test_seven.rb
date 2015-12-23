@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterThree
   class TestSeven < Minitest::Test
-
     def setup
       @animal_queue = Seven.new
     end
@@ -62,7 +61,5 @@ module ChapterThree
       @animal_queue.enqueue(Animal.dog)
       assert_nil @animal_queue.dequeue_cat
     end
-
   end
 end
-

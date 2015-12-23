@@ -16,6 +16,5 @@ module ChapterFive
     def test_returns_zero_for_zero
       assert_equal 0, bit_difference(0, 0)
     end
-
   end
 end

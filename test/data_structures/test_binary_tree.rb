@@ -1,14 +1,13 @@
 require 'config_test'
 
 describe DataStructures::BinaryTree do
-
   subject { DataStructures::BinaryTree }
 
   it { subject.must_respond_to :from }
 
   describe '::from' do
     it 'creates a binary tree from required specified nodes' do
-      nodes = [[1,[2,3]]]
+      nodes = [[1, [2, 3]]]
       tree = subject.from(nodes, 1)
 
       assert_equal 1, tree.root.key
@@ -17,7 +16,7 @@ describe DataStructures::BinaryTree do
     end
 
     it 'creates a binary tree to whatever depth specified' do
-      nodes = [[1,[2,3]],[2,[4,5]],[3,[6,7]]]
+      nodes = [[1, [2, 3]], [2, [4, 5]], [3, [6, 7]]]
       tree = subject.from(nodes, 1)
 
       assert_equal 1, tree.root.key
@@ -46,7 +45,7 @@ describe DataStructures::BinaryTree do
     end
 
     it 'can create an unbalanced binary tree' do
-      nodes = [[1,[2,3]],[2,[5]],[5,[nil, 8]]]
+      nodes = [[1, [2, 3]], [2, [5]], [5, [nil, 8]]]
       tree = subject.from(nodes, 1)
 
       assert_equal 1, tree.root.key
@@ -62,5 +61,4 @@ describe DataStructures::BinaryTree do
       assert_nil tree.root.left.left.right.right
     end
   end
-
 end

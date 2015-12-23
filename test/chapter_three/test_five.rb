@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterThree
   class TestFive < Minitest::Test
-
     def setup
       @queue = Five.new
     end
@@ -48,6 +47,5 @@ module ChapterThree
     def test_dequeue_when_empty
       assert_nil @queue.dequeue
     end
-
   end
 end

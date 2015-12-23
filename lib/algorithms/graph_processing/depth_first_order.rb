@@ -1,7 +1,6 @@
 module Algorithms
   module GraphProcessing
     class DepthFirstOrder
-
       def initialize(graph)
         @graph = graph
         execute
@@ -19,7 +18,8 @@ module Algorithms
 
       def execute
         @marked = Array.new(@graph.size_vertices) { false }
-        @pre, @post = [], []
+        @pre = []
+        @post = []
         @marked.each_with_index do |was_visited, v|
           r_execute(v) unless was_visited
         end
@@ -35,7 +35,6 @@ module Algorithms
 
         @post.push(from)
       end
-
     end
   end
 end

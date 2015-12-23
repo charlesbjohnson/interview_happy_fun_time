@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterFour
   class TestTwo < Minitest::Test
-
     class DataStructures::Graph
       include Two
     end
@@ -37,6 +36,5 @@ module ChapterFour
     def test_returns_false_on_nonexistent_vertices
       refute @graph.connected?(0, 1)
     end
-
   end
 end

@@ -1,6 +1,5 @@
 module ChapterThree
   module Six
-
     # Write a program to sort a stack in ascending order (with biggest
     # items on top). You may use at most one additional stack to hold
     # items, but you may not copy the ements into any other data structure
@@ -28,6 +27,5 @@ module ChapterThree
     def in_sorted_position?(item, to)
       to.size.zero? || item > to.peek
     end
-
   end
 end

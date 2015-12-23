@@ -1,6 +1,5 @@
 module ChapterOne
   module One
-
     # Implement an algorithm to determine if a string has all unique characters
     def unique_chars?(s)
       existing_vals = []
@@ -12,6 +11,5 @@ module ChapterOne
 
       result
     end
-
   end
 end

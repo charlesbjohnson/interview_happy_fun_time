@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe DataStructures::Graph do
-
   subject { DataStructures::Graph.new }
 
   it { subject.must_respond_to :size_vertices }
@@ -78,5 +77,4 @@ describe DataStructures::Graph do
       end
     end
   end
-
 end

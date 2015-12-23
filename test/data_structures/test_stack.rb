@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe DataStructures::Stack do
-
   subject { DataStructures::Stack.new }
 
   it { subject.must_respond_to :size }
@@ -81,8 +80,8 @@ describe DataStructures::Stack do
 
   describe '#each' do
     it 'yields each item' do
-      expected = %w[foo bar baz]
-      expected.reverse.each { |item| subject.push(item) }
+      expected = %w(foo bar baz)
+      expected.reverse_each { |item| subject.push(item) }
 
       subject.each.must_be_kind_of(Enumerator)
 
@@ -91,5 +90,4 @@ describe DataStructures::Stack do
       actual.must_equal(expected)
     end
   end
-
 end

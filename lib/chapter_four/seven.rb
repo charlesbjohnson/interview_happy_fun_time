@@ -1,6 +1,5 @@
 module ChapterFour
   module Seven
-
     # Design an algorithm and write code to find the first common
     # ancestor of two nods in a binary tree. Avoid storing additional
     # nodes in a data structure. NOTE: This is not necessarily a
@@ -31,6 +30,5 @@ module ChapterFour
 
       r_contains(cursor.left, item) || r_contains(cursor.right, item)
     end
-
   end
 end

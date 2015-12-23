@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe Algorithms::GraphProcessing::DepthFirstOrder do
-
   subject { Algorithms::GraphProcessing::DepthFirstOrder.new(graph) }
 
   let(:graph) { DataStructures::UndirectedGraph.new }
@@ -74,5 +73,4 @@ describe Algorithms::GraphProcessing::DepthFirstOrder do
       end
     end
   end
-
 end

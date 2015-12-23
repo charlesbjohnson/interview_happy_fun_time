@@ -2,7 +2,6 @@
 # on the spot.
 module ChapterFive
   module Seven
-
     # An array A contains all the integers from 0 to n, except for one
     # number which is missing. In this problem, we cannot access an
     # entire integer in A with a single operation. The elements of A
@@ -12,12 +11,14 @@ module ChapterFive
     # in O(N) time?
     def find_missing(numbers)
       result = []
-      active, column = numbers, 0
+      active = numbers
+      column = 0
       until active.empty?
         count = count_bits_at_column(column, active)
         column += 1
 
-        zeros_count, ones_count = count[:zero][:count], count[:one][:count]
+        zeros_count = count[:zero][:count]
+        ones_count = count[:one][:count]
         zeros_count -= 1 if active.size.even?
 
         if zeros_count > ones_count
@@ -35,8 +36,8 @@ module ChapterFive
     private
 
     def count_bits_at_column(c, numbers)
-      result = {zero: {count: 0, matching: []},
-               one: {count: 0, matching: []}}
+      result = { zero: { count: 0, matching: [] },
+                 one: { count: 0, matching: [] } }
 
       numbers.each do |n|
         which = bit(c, n).zero? ? :zero : :one
@@ -60,6 +61,5 @@ module ChapterFive
 
       result
     end
-
   end
 end

@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe DataStructures::UndirectedGraph do
-
   subject { DataStructures::UndirectedGraph.new }
 
   it { subject.must_respond_to :size_vertices }

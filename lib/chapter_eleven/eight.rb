@@ -1,7 +1,6 @@
 # Intuitive but surprisingly hard to get update_ranks right.
 module ChapterEleven
   module Eight
-
     # Imagine you are reading in a stream of integers. Periodically, you wish
     # to be able to look up the rank of a number x (the number of values less
     # than or equal to x). Implement the data structures and algorithms to
@@ -10,7 +9,6 @@ module ChapterEleven
     # getRankOfNumber(int x), which returns the number of values less than
     # or equal to x (not including x itself).
     class Ranker
-
       def initialize
         @root = nil
       end
@@ -68,17 +66,15 @@ module ChapterEleven
           cursor.rank
         end
       end
-
     end
 
     class Node
       attr_accessor :number, :rank, :left, :right
 
       def initialize(n, r)
-        @number, @rank = n, r
+        @number = n
+        @rank = r
       end
-
     end
-
   end
 end

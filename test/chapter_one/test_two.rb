@@ -19,6 +19,5 @@ module ChapterOne
 
       assert_equal(expected, actual)
     end
-
   end
 end

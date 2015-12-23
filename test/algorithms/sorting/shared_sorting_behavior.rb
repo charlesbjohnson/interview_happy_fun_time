@@ -1,7 +1,6 @@
 module Algorithms
   module Sorting
     module SharedSortingBehavior
-
       module Immutable
         def test_returns_new_sorted_array_when_odd_length
           a = [50, 18, 46, -10, 2, -9, 30, 25, 48]
@@ -83,7 +82,6 @@ module Algorithms
           assert_same(a, result)
         end
       end
-
     end
   end
 end

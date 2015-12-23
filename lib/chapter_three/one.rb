@@ -2,7 +2,6 @@
 # and not the Java kind that the book is aiming for
 module ChapterThree
   class One
-
     # Describe how you could use a single array to implement
     # three stacks.
     def initialize
@@ -64,6 +63,5 @@ module ChapterThree
         stack_number += 1
       end
     end
-
   end
 end

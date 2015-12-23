@@ -1,11 +1,11 @@
 # had to look this up. pretty tricky but made sense
 module ChapterTwo
   module Six
-
     # Given a circular linked list, implement an algorithm
     # which returns the node at the beginning of the loop.
     def find_loop
-      slow, fast = @head.next, @head.next
+      slow = @head.next
+      fast = @head.next
       while fast && fast.next
         slow = slow.next
         fast = fast.next.next
@@ -22,6 +22,5 @@ module ChapterTwo
 
       slow
     end
-
   end
 end

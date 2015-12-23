@@ -1,10 +1,9 @@
 require 'config_test'
 
 describe DataStructures::BinaryHeapPriorityQueue do
-
   subject { DataStructures::BinaryHeapPriorityQueue.new(priority) }
 
-  let(:priority) { ->(a, b){ a >= b } }
+  let(:priority) { ->(a, b) { a >= b } }
 
   it { subject.must_be_kind_of(Enumerable) }
 
@@ -39,8 +38,8 @@ describe DataStructures::BinaryHeapPriorityQueue do
     end
 
     it 'stays the same on #each' do
-      [1,2,3,4].each { |i| subject.push(i) }
-      subject.each { }
+      [1, 2, 3, 4].each { |i| subject.push(i) }
+      subject.each {}
       subject.size.must_equal(4)
     end
   end
@@ -61,7 +60,7 @@ describe DataStructures::BinaryHeapPriorityQueue do
     end
 
     describe 'with a comparable priority' do
-      let(:priority) { ->(a, b){ a <=> b } }
+      let(:priority) { ->(a, b) { a <=> b } }
 
       before { [1, 0, 1, 2, 1].each { |i| subject.push(i) } }
 
@@ -123,13 +122,14 @@ describe DataStructures::BinaryHeapPriorityQueue do
     before { [8, 3, -11, 10, 1].each { |i| subject.push(i) } }
 
     it 'yields each element by the highest priority' do
-      expected, actual = [10, 8, 3, 1, -11], []
+      expected = [10, 8, 3, 1, -11]
+      actual = []
       subject.each { |i| actual.push(i) }
       actual.must_equal(expected)
     end
 
     it 'does not remove any elements' do
-      subject.each { }
+      subject.each {}
       subject.peek.must_equal(10)
     end
 
@@ -139,5 +139,4 @@ describe DataStructures::BinaryHeapPriorityQueue do
       end
     end
   end
-
 end

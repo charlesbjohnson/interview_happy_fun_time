@@ -1,14 +1,12 @@
 module Algorithms
   module GraphProcessing
     class BipartiteDetection
+      attr_reader :bipartite
+      alias_method :bipartite?, :bipartite
 
       def initialize(graph)
         @graph = graph
         execute
-      end
-
-      def bipartite?
-        @bipartite
       end
 
       private
@@ -18,9 +16,7 @@ module Algorithms
         @colors = Array.new(@graph.size_vertices)
         @bipartite = true
         @marked.each_with_index do |was_visited, v|
-          if !was_visited && @bipartite
-            r_execute(v, true)
-          end
+          r_execute(v, true) if !was_visited && @bipartite
         end
       end
 
@@ -28,7 +24,7 @@ module Algorithms
         @marked[from] = true
         @colors[from] = color
         @graph.adjacent(from).each do |to|
-          return unless @bipartite
+          break unless @bipartite
 
           if @colors[to] == color
             @bipartite = false
@@ -37,7 +33,6 @@ module Algorithms
           end
         end
       end
-
     end
   end
 end

@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe DataStructures::HashMap do
-
   subject { DataStructures::HashMap.new }
 
   it { subject.must_respond_to :size }
@@ -53,7 +52,8 @@ describe DataStructures::HashMap do
 
   describe '#delete' do
     it 'deletes the item with the matching key' do
-      a, b = :a, :b
+      a = :a
+      b = :b
       subject.put(b, b.to_s)
       subject.put(a, a.to_s)
       subject.put(key, val)
@@ -68,7 +68,8 @@ describe DataStructures::HashMap do
 
     describe 'multiple' do
       it 'deletes the items with the matching keys' do
-        a, b = :a, :b
+        a = :a
+        b = :b
         subject.put(b, b.to_s)
         subject.put(a, a.to_s)
         subject.put(key, val)
@@ -125,5 +126,4 @@ describe DataStructures::HashMap do
       actual.sort.must_equal(expected.sort)
     end
   end
-
 end

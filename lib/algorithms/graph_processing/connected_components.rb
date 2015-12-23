@@ -38,7 +38,6 @@ module Algorithms
           r_execute(to)
         end
       end
-
     end
   end
 end

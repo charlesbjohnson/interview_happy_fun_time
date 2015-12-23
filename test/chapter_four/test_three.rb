@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterFour
   class TestThree < Minitest::Test
-
     class DataStructures::BinarySearchTreeMap
       include ThreeHelpers
       extend Three
@@ -26,6 +25,5 @@ module ChapterFour
       @tree = DataStructures::BinarySearchTreeMap.create_min_height([])
       assert_equal(-1, @tree.height)
     end
-
   end
 end

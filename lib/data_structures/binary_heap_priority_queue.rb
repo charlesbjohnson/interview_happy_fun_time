@@ -50,7 +50,7 @@ module DataStructures
     def up_reheapify(index)
       while index > 1 && higher?(index, (index / 2))
         exchange(index, (index / 2))
-        index = index / 2
+        index /= 2
       end
     end
 
@@ -78,6 +78,5 @@ module DataStructures
     def exchange(from, to)
       @heap[from], @heap[to] = @heap[to], @heap[from]
     end
-
   end
 end

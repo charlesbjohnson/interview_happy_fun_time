@@ -5,7 +5,7 @@ module ChapterFour
     include Seven
 
     def setup
-      nodes = [[0,[1,2]],[1,[3,4]],[2,[5,6]],[3,[7]],[5,[nil,8]]]
+      nodes = [[0, [1, 2]], [1, [3, 4]], [2, [5, 6]], [3, [7]], [5, [nil, 8]]]
       @tree = DataStructures::BinaryTree.from(nodes, 0)
     end
 
@@ -32,6 +32,5 @@ module ChapterFour
                                 @tree.root,
                                 DataStructures::BinaryTreeNode.new(10))
     end
-
   end
 end

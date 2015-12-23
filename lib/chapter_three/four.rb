@@ -1,7 +1,6 @@
 # This one gets me every time
 module ChapterThree
   class Four
-
     # In the classic problem of the Towers of Hanoi, you have 3 towers
     # and N disks of different sizes which can slide onto any tower. The
     # puzzle starts with disks sorted in ascending order of size from top
@@ -31,13 +30,12 @@ module ChapterThree
     end
 
     def r_solve(disks, from, to, by)
-      if disks > 0
-        r_solve(disks - 1, from, by, to)
-        @towers[from].move_disk(@towers[to])
-        r_solve(disks - 1, by, to, from)
-      end
-    end
+      return if disks <= 0
 
+      r_solve(disks - 1, from, by, to)
+      @towers[from].move_disk(@towers[to])
+      r_solve(disks - 1, by, to, from)
+    end
   end
 
   class Tower
@@ -51,10 +49,9 @@ module ChapterThree
     end
 
     def move_disk(to)
-      if to.stack.peek.nil? || @stack.peek < to.stack.peek
-        report_move(@stack.peek, @index, to.index)
-        to.stack.push(@stack.pop)
-      end
+      return unless to.stack.peek.nil? || @stack.peek < to.stack.peek
+      report_move(@stack.peek, @index, to.index)
+      to.stack.push(@stack.pop)
     end
 
     private
@@ -66,6 +63,5 @@ module ChapterThree
     def letter(index)
       (index + 'A'.ord).chr
     end
-
   end
 end

@@ -3,7 +3,6 @@
 # to try and implement in an interview.
 module ChapterFive
   module Eight
-
     # A monochrome screen is stored as a single array of bytes, allowing
     # eight consecutive pixels to be stored in one byte. The screen has
     # width w, where w is divisible by 8 (that is, no byte will be split
@@ -24,7 +23,7 @@ module ChapterFive
       x2_index = horizontal_index_x2 + vertical_index
 
       bytes_to_fill = (x1_index.succ..x2_index.pred)
-      bytes_to_fill.each { |b| screen[b] = set_byte(screen[b]) }
+      bytes_to_fill.each { |b| screen[b] = enable_btye(screen[b]) }
 
       if x1_index < x2_index
         left = screen[x1_index]
@@ -47,7 +46,7 @@ module ChapterFive
       screen
     end
 
-    def set_byte(n)
+    def enable_btye(n)
       n | 0xff
     end
 
@@ -72,6 +71,5 @@ module ChapterFive
     def set_from_most_significant(count, of, n)
       n | ((1 << count.succ) - 2) << ((of - count).pred)
     end
-
   end
 end

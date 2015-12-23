@@ -19,6 +19,5 @@ module ChapterFive
     def test_returns_error_when_too_large
       assert_equal 'ERROR', to_binary_s(0.72)
     end
-
   end
 end

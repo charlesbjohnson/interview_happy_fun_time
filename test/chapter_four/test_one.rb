@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterFour
   class TestOne < Minitest::Test
-
     class DataStructures::BinarySearchTreeMap
       include One
     end
@@ -33,6 +32,5 @@ module ChapterFour
     def test_returns_true_if_empty
       assert @tree.balanced?
     end
-
   end
 end

@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe DataStructures::Queue do
-
   subject { DataStructures::Queue.new }
 
   it { subject.must_respond_to :size }
@@ -81,7 +80,7 @@ describe DataStructures::Queue do
 
   describe '#each' do
     it 'yields each item' do
-      expected = %w[foo bar baz]
+      expected = %w(foo bar baz)
       expected.each { |item| subject.enqueue(item) }
 
       subject.each.must_be_kind_of(Enumerator)
@@ -91,5 +90,4 @@ describe DataStructures::Queue do
       actual.must_equal(expected)
     end
   end
-
 end

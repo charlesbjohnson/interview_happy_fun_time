@@ -42,6 +42,5 @@ module ChapterEleven
       p = [[], Stats.new(70, 180)]
       assert_equal 0, tallest_human_tower(p)
     end
-
   end
 end

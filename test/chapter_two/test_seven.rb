@@ -2,7 +2,6 @@ require 'config_test'
 
 module ChapterTwo
   class TestSeven < Minitest::Test
-
     class DataStructures::LinkedList
       include Seven
     end
@@ -22,7 +21,7 @@ module ChapterTwo
     end
 
     def test_palindrome_numeric
-      [1,0,1].each { |n| @list.append(n) }
+      [1, 0, 1].each { |n| @list.append(n) }
       assert @list.palindrome?
     end
 
@@ -34,6 +33,5 @@ module ChapterTwo
       @list.append('a')
       assert @list.palindrome?
     end
-
   end
 end

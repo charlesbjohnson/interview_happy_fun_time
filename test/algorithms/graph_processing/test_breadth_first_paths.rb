@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe Algorithms::GraphProcessing::BreadthFirstPaths do
-
   subject { Algorithms::GraphProcessing::BreadthFirstPaths.new(graph, 0) }
 
   let(:graph) { DataStructures::UndirectedGraph.new }
@@ -104,5 +103,4 @@ describe Algorithms::GraphProcessing::BreadthFirstPaths do
       end
     end
   end
-
 end

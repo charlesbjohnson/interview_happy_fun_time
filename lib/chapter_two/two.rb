@@ -2,7 +2,6 @@ require 'ostruct'
 
 module ChapterTwo
   module Two
-
     # Implement an algorithm to find the kth to last element
     # of a singly linked list
     def from_last(index)
@@ -20,8 +19,7 @@ module ChapterTwo
 
       pos = r_from_last(cursor.next, index, result)
       result.node = cursor if index == pos
-      return pos + 1
+      pos + 1
     end
-
   end
 end

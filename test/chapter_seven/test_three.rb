@@ -28,6 +28,5 @@ module ChapterSeven
 
       refute intersects?(a, b)
     end
-
   end
 end

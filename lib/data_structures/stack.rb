@@ -9,7 +9,7 @@ module DataStructures
     end
 
     def size
-      self.to_a.size
+      to_a.size
     end
 
     def each(&block)
@@ -42,6 +42,5 @@ module DataStructures
 
       doomed.data
     end
-
   end
 end

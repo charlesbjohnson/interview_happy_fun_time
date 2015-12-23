@@ -1,6 +1,5 @@
 module ChapterFive
   module Five
-
     # Write a function to determine the number of bits required
     # to convert integer A to integer B
     # EXAMPLE
@@ -21,6 +20,5 @@ module ChapterFive
 
       count
     end
-
   end
 end

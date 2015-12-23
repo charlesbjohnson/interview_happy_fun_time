@@ -1,7 +1,6 @@
 module Algorithms
   module Sorting
     module BottomUpMergeSort
-
       def sort(a)
         sort!(a.clone)
       end
@@ -38,7 +37,8 @@ module Algorithms
 
       def merge(a, low_start, low_end, high_start, high_end)
         tmp = a.clone
-        low_i, high_i = low_start, high_start
+        low_i = low_start
+        high_i = high_start
 
         past_low_end = -> { low_i > low_end }
         past_high_end = -> { high_i > high_end }
@@ -56,7 +56,6 @@ module Algorithms
           end
         end
       end
-
     end
   end
 end

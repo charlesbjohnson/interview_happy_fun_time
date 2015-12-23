@@ -2,7 +2,6 @@
 # get odd and even bit masks. Didn't realize I could just hard code them.
 module ChapterFive
   module Six
-
     ODD_MASK  = 0xaaaaaaaa # 1010 1010 1010 1010 ...
     EVEN_MASK = 0x55555555 # 0101 0101 0101 0101 ...
 
@@ -12,6 +11,5 @@ module ChapterFive
     def swap_even_odd_bits(n)
       ((n & ODD_MASK) >> 1) | ((n & EVEN_MASK) << 1)
     end
-
   end
 end

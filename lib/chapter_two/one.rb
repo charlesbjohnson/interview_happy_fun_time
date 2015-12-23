@@ -1,6 +1,5 @@
 module ChapterTwo
   module One
-
     # Write code to remove duplicates from an unsorted linked list.
     # FOLLOW UP
     # How would you solve this problem if a temporary buffer is not allowed?
@@ -41,7 +40,7 @@ module ChapterTwo
         cursor = cursor.next
       end
 
-      dups = counts.select { |_,v| v > 1 }
+      dups = counts.select { |_, v| v > 1 }
       dups.each_key { |k| dups[k] = 0 }
     end
 
@@ -50,6 +49,5 @@ module ChapterTwo
       cursor.next = doomed.next
       @tail = cursor if doomed == @tail
     end
-
   end
 end

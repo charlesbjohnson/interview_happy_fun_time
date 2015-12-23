@@ -27,7 +27,8 @@ module DataStructures
     end
 
     def get(key)
-      cursor, result = @root, nil
+      cursor = @root
+      result = nil
       until cursor.nil?
         if key < cursor.key
           cursor = cursor.left
@@ -167,16 +168,15 @@ module DataStructures
       cursor.count = 1 + r_size(cursor.left) + r_size(cursor.right)
       cursor
     end
-
   end
 
   class TreeNode
     attr_accessor :key, :value, :left, :right, :count
 
     def initialize(k = nil, v = nil, c: nil)
-      @key, @value = k, v
+      @key = k
+      @value = v
       @count = c
     end
-
   end
 end

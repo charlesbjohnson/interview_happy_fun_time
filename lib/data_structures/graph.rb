@@ -1,6 +1,5 @@
 module DataStructures
   class Graph
-
     def initialize
       @table = []
     end
@@ -35,7 +34,6 @@ module DataStructures
 
       node.adjacent.push(to) unless @table[to].nil?
     end
-
   end
 
   class GraphNode
@@ -45,6 +43,5 @@ module DataStructures
       @data = d
       @adjacent = []
     end
-
   end
 end

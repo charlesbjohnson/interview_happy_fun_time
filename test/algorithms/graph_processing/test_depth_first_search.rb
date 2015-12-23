@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe Algorithms::GraphProcessing::DepthFirstSearch do
-
   subject { Algorithms::GraphProcessing::DepthFirstSearch.new(graph, 0) }
 
   let(:graph) { DataStructures::UndirectedGraph.new }
@@ -92,5 +91,4 @@ describe Algorithms::GraphProcessing::DepthFirstSearch do
       end
     end
   end
-
 end

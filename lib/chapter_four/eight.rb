@@ -1,6 +1,5 @@
 module ChapterFour
   module Eight
-
     # You have two very large binary trees: T1, with millions of nodes,
     # and T2, with hundreds of nodes. Create an algorithm to decide if T2
     # is a subtree of T1.
@@ -35,6 +34,5 @@ module ChapterFour
       match_right = r_exact_match?(left.right, right.right)
       match_left && match_right
     end
-
   end
 end

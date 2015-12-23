@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe Algorithms::GraphProcessing::UndirectedCycleDetection do
-
   subject { Algorithms::GraphProcessing::UndirectedCycleDetection.new(graph) }
 
   let(:graph) { DataStructures::UndirectedGraph.new }
@@ -65,5 +64,4 @@ describe Algorithms::GraphProcessing::UndirectedCycleDetection do
       end
     end
   end
-
 end

@@ -1,6 +1,5 @@
 module ChapterThree
   class Five
-
     # Implement a MyQueue class which implements a queue using two stacks.
     def initialize
       @enqueue = DataStructures::Stack.new
@@ -30,12 +29,8 @@ module ChapterThree
     private
 
     def dump_enqueue
-      if @dequeue.size.zero?
-        while @enqueue.size > 0
-          @dequeue.push(@enqueue.pop)
-        end
-      end
+      return unless @dequeue.size.zero?
+      @dequeue.push(@enqueue.pop) while @enqueue.size > 0
     end
-
   end
 end

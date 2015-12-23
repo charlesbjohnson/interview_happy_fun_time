@@ -21,7 +21,7 @@ module ChapterThree
 
     def test_sort_ascending_when_sorted
       expected = (1..5).to_a.reverse
-      expected.reverse.each { |i| @stack.push(i) }
+      expected.reverse_each { |i| @stack.push(i) }
 
       assert_equal expected, sort_ascending(@stack).to_a
     end
@@ -32,6 +32,5 @@ module ChapterThree
 
       assert_equal expected, sort_ascending(@stack).to_a
     end
-
   end
 end

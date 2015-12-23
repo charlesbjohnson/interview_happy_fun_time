@@ -1,6 +1,5 @@
 module ChapterSeven
   module Six
-
     # Given a two-dimensional graph with points on it, find a line
     # which passes the most number of points.
     def line_of_best_fit(points)
@@ -81,6 +80,5 @@ module ChapterSeven
         rounded.zero? ? 0.0 : rounded
       end
     end
-
   end
 end

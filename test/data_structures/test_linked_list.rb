@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe DataStructures::LinkedList do
-
   subject { DataStructures::LinkedList.new }
 
   it { subject.must_respond_to :size }
@@ -27,7 +26,8 @@ describe DataStructures::LinkedList do
     end
 
     it 'adds to the end of the list' do
-      bar, baz = 'bar', 'baz'
+      bar = 'bar'
+      baz = 'baz'
       subject.append(foo)
       subject.append(bar)
       subject.append(baz)
@@ -65,7 +65,8 @@ describe DataStructures::LinkedList do
     end
 
     it 'inserts at the middle of the list' do
-      bar, baz = 'bar', 'baz'
+      bar = 'bar'
+      baz = 'baz'
       subject.insert(0, foo)
       subject.insert(1, bar)
       subject.insert(1, baz)
@@ -147,7 +148,7 @@ describe DataStructures::LinkedList do
 
   describe '#each' do
     it 'yields each item' do
-      expected = %w[foo bar baz]
+      expected = %w(foo bar baz)
       expected.each { |item| subject.append(item) }
 
       subject.each.must_be_kind_of(Enumerator)
@@ -171,5 +172,4 @@ describe DataStructures::LinkedList do
       subject.index(foo).must_be_nil
     end
   end
-
 end

@@ -2,7 +2,6 @@ require 'data_structures'
 
 module ChapterThree
   class Two < DataStructures::Stack
-
     # How would you design a stack which, in addition to
     # push and pop, also has a function min which returns
     # the minimum element? Push, pop, and min should all
@@ -23,7 +22,6 @@ module ChapterThree
 
       @head = new
     end
-
   end
 
   class MinNode < DataStructures::SingleNode

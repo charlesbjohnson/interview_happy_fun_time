@@ -5,7 +5,7 @@ module ChapterFour
     include Five
 
     def setup
-      nodes = [[3,[1,4]],[1,[0,2]]]
+      nodes = [[3, [1, 4]], [1, [0, 2]]]
       @tree = DataStructures::BinaryTree.from(nodes, 3)
     end
 
@@ -14,7 +14,7 @@ module ChapterFour
     end
 
     def test_returns_false_if_tree_is_not_binary_search_tree
-      nodes = [[2,[1,4]],[1,[0,3]]]
+      nodes = [[2, [1, 4]], [1, [0, 3]]]
       @tree = DataStructures::BinaryTree.from(nodes, 2)
 
       refute binary_search_tree?(@tree.root)
@@ -30,6 +30,5 @@ module ChapterFour
     def test_returns_true_if_empty
       assert binary_search_tree?(nil)
     end
-
   end
 end

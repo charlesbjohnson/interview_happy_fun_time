@@ -1,7 +1,6 @@
 # Also had to look this up. Didn't think of using a 1D array.
 module ChapterNine
   module Nine
-
     def queen_placements
       r_queen_placements(0, [], [], 8)
     end
@@ -38,6 +37,5 @@ module ChapterNine
 
       true
     end
-
   end
 end

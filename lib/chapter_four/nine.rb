@@ -1,6 +1,5 @@
 module ChapterFour
   module Nine
-
     # You are given a binary tree in which each node contains a value.
     # Design an algorithm to print all paths which sum to a given value.
     # The path does not need to start or end at the root or a leaf.
@@ -35,6 +34,5 @@ module ChapterFour
       r_paths_to_sum(cursor.right, sum, target_sum, current_path, paths)
       current_path.pop
     end
-
   end
 end

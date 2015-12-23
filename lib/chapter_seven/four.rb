@@ -1,6 +1,5 @@
 module ChapterSeven
   module Four
-
     # Write methods to implement the multiply, subtract, and divide
     # operations for integers. Use only the add operator.
 
@@ -10,7 +9,8 @@ module ChapterSeven
 
     def negate
       increment = self < 0 ? 1 : -1
-      tmp, negated = self, 0
+      tmp = self
+      negated = 0
       until tmp.zero?
         tmp = tmp.add(increment)
         negated = negated.add(increment)
@@ -24,9 +24,11 @@ module ChapterSeven
     end
 
     def multiply(i)
-      a, b = self, i
+      a = self
+      b = i
 
-      result, count = 0, b
+      result = 0
+      count = b
       until count.zero?
         count = b < 0 ? count.add(1) : count.subtract(1)
         result = result.add(a)
@@ -36,9 +38,10 @@ module ChapterSeven
     end
 
     def divide(i)
-      raise 'Divide by zero' if i.zero?
+      fail 'Divide by zero' if i.zero?
 
-      a, b = self, i
+      a = self
+      b = i
       negate_quotient = false
 
       if a < 0
@@ -59,6 +62,5 @@ module ChapterSeven
 
       negate_quotient ? result.negate : result
     end
-
   end
 end

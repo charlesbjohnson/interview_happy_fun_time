@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe DataStructures::DirectedGraph do
-
   subject { DataStructures::DirectedGraph.new }
 
   it { subject.must_respond_to :size_vertices }
@@ -89,5 +88,4 @@ describe DataStructures::DirectedGraph do
       reversed.adjacent(4).must_equal([1])
     end
   end
-
 end

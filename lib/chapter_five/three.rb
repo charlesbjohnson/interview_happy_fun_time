@@ -1,7 +1,6 @@
 # Oh my god... These questions...
 module ChapterFive
   module Three
-
     # Given a positive integer, print the next smallest and the next
     # largest number that have the same number of 1 bits in their
     # binary representation.
@@ -14,16 +13,16 @@ module ChapterFive
     def equal_bits_prev(n)
       index = last_non_trailing(1, n)
 
-      if index
-        n = clear_bit(index, n)
+      return unless index
 
-        prev = index.pred
-        n = set_bit(prev, n)
+      n = clear_bit(index, n)
 
-        bits_to_move = count_set_bits_after(prev, n)
-        n = clear_bits_after(prev, n)
-        set_bits_from_most_significant(bits_to_move, prev, n)
-      end
+      prev = index.pred
+      n = set_bit(prev, n)
+
+      bits_to_move = count_set_bits_after(prev, n)
+      n = clear_bits_after(prev, n)
+      set_bits_from_most_significant(bits_to_move, prev, n)
     end
 
     def equal_bits_next(n)
@@ -62,7 +61,7 @@ module ChapterFive
       n >>= after
 
       count = 0
-      while ((n & 1) == bit)
+      while (n & 1) == bit
         return nil if n == bit
 
         n >>= 1
@@ -123,6 +122,5 @@ module ChapterFive
     def set_bits_from_most_significant(bits, of, n)
       n | (((1 << bits.succ) - 2) << (of - bits).pred)
     end
-
   end
 end

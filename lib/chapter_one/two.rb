@@ -1,9 +1,9 @@
 module ChapterOne
   module Two
-
     # Implement a function which reverses a string
     def reverse(s)
-      lo, hi = 0, s.length.pred
+      lo = 0
+      hi = s.length.pred
       result = s.dup
 
       while lo < hi
@@ -11,11 +11,11 @@ module ChapterOne
         result[lo] = result[hi]
         result[hi] = tmp
 
-        lo, hi = lo.succ, hi.pred
+        lo = lo.succ
+        hi = hi.pred
       end
 
       result
     end
-
   end
 end

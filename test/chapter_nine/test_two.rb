@@ -43,6 +43,5 @@ module ChapterNine
     def test_returns_nil_if_no_path_to_target
       assert_nil find_blocked_robot_path([2, 2], [[2, 2]])
     end
-
   end
 end

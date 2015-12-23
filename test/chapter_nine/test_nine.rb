@@ -9,6 +9,5 @@ module ChapterNine
       # https://en.wikipedia.org/wiki/Eight_queens_puzzle#Counting_solutions
       assert_equal 92, queen_placements.size
     end
-
   end
 end

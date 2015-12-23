@@ -1,6 +1,5 @@
 module ChapterOne
   module Five
-
     # Implement a method to perform basic string compression using
     # the counts of repeated characters
     # If the compressed string would not become smaller than the original
@@ -15,6 +14,5 @@ module ChapterOne
 
       compressed.length > s.length ? s : compressed
     end
-
   end
 end

@@ -1,7 +1,6 @@
 require 'config_test'
 
 describe DataStructures::BinarySearchTreeMap do
-
   subject { DataStructures::BinarySearchTreeMap.new }
 
   it { subject.must_respond_to :size }
@@ -29,7 +28,8 @@ describe DataStructures::BinarySearchTreeMap do
 
   describe '#min' do
     it 'returns the key value pair with the smallest key' do
-      a, b = :a, :b
+      a = :a
+      b = :b
       subject.put(b, b.to_s)
       subject.put(a, a.to_s)
       subject.put(key, val)
@@ -46,7 +46,8 @@ describe DataStructures::BinarySearchTreeMap do
 
   describe '#max' do
     it 'returns the key value pair with the largest key' do
-      a, b = :a, :b
+      a = :a
+      b = :b
       subject.put(b, b.to_s)
       subject.put(a, a.to_s)
       subject.put(key, val)
@@ -81,7 +82,8 @@ describe DataStructures::BinarySearchTreeMap do
 
     describe 'multiple' do
       it 'sets the value for each key' do
-        a, b = :a, :b
+        a = :a
+        b = :b
         subject.put(b, b.to_s)
         subject.put(a, a.to_s)
         subject.put(key, val)
@@ -96,7 +98,8 @@ describe DataStructures::BinarySearchTreeMap do
 
   describe '#delete_min' do
     it 'deletes the item with the smallest key' do
-      a, b = :a, :b
+      a = :a
+      b = :b
       subject.put(b, b.to_s)
       subject.put(a, a.to_s)
       subject.put(key, val)
@@ -111,7 +114,8 @@ describe DataStructures::BinarySearchTreeMap do
 
     describe 'multiple' do
       it 'deletes the items with the smallest keys' do
-        a, b = :a, :b
+        a = :a
+        b = :b
         subject.put(b, b.to_s)
         subject.put(a, a.to_s)
         subject.put(key, val)
@@ -146,7 +150,8 @@ describe DataStructures::BinarySearchTreeMap do
 
     describe 'unbalanced' do
       it 'deletes the item with the smallest key' do
-        a, b = :a, :b
+        a = :a
+        b = :b
         subject.put(a, a.to_s)
         subject.put(b, b.to_s)
         subject.put(key, val)
@@ -163,7 +168,8 @@ describe DataStructures::BinarySearchTreeMap do
 
   describe '#delete_max' do
     it 'deletes the item with the largest key' do
-      a, b = :a, :b
+      a = :a
+      b = :b
       subject.put(b, b.to_s)
       subject.put(a, a.to_s)
       subject.put(key, val)
@@ -178,7 +184,8 @@ describe DataStructures::BinarySearchTreeMap do
 
     describe 'multiple' do
       it 'deletes the items with the largest keys' do
-        a, b = :a, :b
+        a = :a
+        b = :b
         subject.put(b, b.to_s)
         subject.put(a, a.to_s)
         subject.put(key, val)
@@ -213,7 +220,8 @@ describe DataStructures::BinarySearchTreeMap do
 
     describe 'unbalanced' do
       it 'deletes the item with the largest key' do
-        a, b = :a, :b
+        a = :a
+        b = :b
         subject.put(a, a.to_s)
         subject.put(b, b.to_s)
         subject.put(key, val)
@@ -230,7 +238,8 @@ describe DataStructures::BinarySearchTreeMap do
 
   describe '#delete' do
     it 'deletes the item with the matching key' do
-      a, b = :a, :b
+      a = :a
+      b = :b
       subject.put(b, b.to_s)
       subject.put(a, a.to_s)
       subject.put(key, val)
@@ -245,7 +254,8 @@ describe DataStructures::BinarySearchTreeMap do
 
     describe 'multiple' do
       it 'deletes the items with the matching keys' do
-        a, b = :a, :b
+        a = :a
+        b = :b
         subject.put(b, b.to_s)
         subject.put(a, a.to_s)
         subject.put(key, val)
@@ -291,7 +301,8 @@ describe DataStructures::BinarySearchTreeMap do
 
     describe 'unbalanced' do
       it 'deletes the item with the matching key' do
-        a, b = :a, :b
+        a = :a
+        b = :b
         subject.put(a, a.to_s)
         subject.put(b, b.to_s)
         subject.put(key, val)
@@ -340,5 +351,4 @@ describe DataStructures::BinarySearchTreeMap do
       actual.must_equal([[:a, 1], [:c, 3], [:b, 2]])
     end
   end
-
 end
