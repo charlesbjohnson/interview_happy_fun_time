@@ -1,5 +1,0 @@
-require 'chapter_seven/three'
-require 'chapter_seven/four'
-require 'chapter_seven/five'
-require 'chapter_seven/six'
-require 'chapter_seven/seven'
