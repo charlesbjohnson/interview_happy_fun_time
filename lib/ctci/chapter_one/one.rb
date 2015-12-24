@@ -1,4 +1,4 @@
-module ChapterOne
+module CTCI::ChapterOne
   module One
     # Implement an algorithm to determine if a string has all unique characters
     def unique_chars?(s)

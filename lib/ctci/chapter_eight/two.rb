@@ -1,6 +1,6 @@
 require 'observer'
 
-module ChapterEight
+module CTCI::ChapterEight
   module Two
     # Imagine you have a call center with three levels of employees:
     # respondent, manager, and director. An incoming telephone call must

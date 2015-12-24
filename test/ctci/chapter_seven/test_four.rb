@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterSeven
+module CTCI::ChapterSeven
   class TestFour < Minitest::Test
     # Not entirely sure why I can't do the usual
     # class Fixnum

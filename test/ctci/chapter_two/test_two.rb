@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterTwo
+module CTCI::ChapterTwo
   class TestTwo < Minitest::Test
     class DataStructures::LinkedList
       include Two

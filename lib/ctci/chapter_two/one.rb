@@ -1,4 +1,4 @@
-module ChapterTwo
+module CTCI::ChapterTwo
   module One
     # Write code to remove duplicates from an unsorted linked list.
     # FOLLOW UP

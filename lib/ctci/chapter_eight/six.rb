@@ -1,6 +1,6 @@
 # A fun one, but really easy to miss bugs. Spent more time debugging
 # tests than the actual implementation.
-module ChapterEight
+module CTCI::ChapterEight
   module Six
     # Implement a jigsaw puzzle. Design the data structures and explain
     # an algorithm to solve the puzzle. You can assume that you have

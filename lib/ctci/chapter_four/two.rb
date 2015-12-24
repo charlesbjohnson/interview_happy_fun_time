@@ -1,4 +1,4 @@
-module ChapterFour
+module CTCI::ChapterFour
   module Two
     # Given a directed graph, design an algorithm to find out whether there
     # is a route between two nodes.

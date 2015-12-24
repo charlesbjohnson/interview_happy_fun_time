@@ -1,6 +1,6 @@
 # I don't like this chapter.
 # Tried to make the solution easily expandable to other primes.
-module ChapterSeven
+module CTCI::ChapterSeven
   module Seven
     LARGE_NUMBER = 2**(0.size * 8)
 

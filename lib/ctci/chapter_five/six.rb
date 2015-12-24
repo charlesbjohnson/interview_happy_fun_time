@@ -1,6 +1,6 @@
 # I had the right idea for this one, but didn't know what to do to
 # get odd and even bit masks. Didn't realize I could just hard code them.
-module ChapterFive
+module CTCI::ChapterFive
   module Six
     ODD_MASK  = 0xaaaaaaaa # 1010 1010 1010 1010 ...
     EVEN_MASK = 0x55555555 # 0101 0101 0101 0101 ...

@@ -1,5 +1,5 @@
 # Intuitive but surprisingly hard to get update_ranks right.
-module ChapterEleven
+module CTCI::ChapterEleven
   module Eight
     # Imagine you are reading in a stream of integers. Periodically, you wish
     # to be able to look up the rank of a number x (the number of values less

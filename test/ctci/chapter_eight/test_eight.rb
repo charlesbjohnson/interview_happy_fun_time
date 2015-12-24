@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterEight
+module CTCI::ChapterEight
   module Eight
     describe Othello do
       subject { Othello.new }

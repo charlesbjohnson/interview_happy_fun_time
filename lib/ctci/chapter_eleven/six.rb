@@ -1,4 +1,4 @@
-module ChapterEleven
+module CTCI::ChapterEleven
   module Six
     # Given an M x N matrix in which each row and each column is stored in
     # ascending order, write a method to find an element.

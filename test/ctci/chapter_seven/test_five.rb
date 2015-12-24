@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterSeven
+module CTCI::ChapterSeven
   class TestFive < Minitest::Test
     include Five
 

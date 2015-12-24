@@ -10,7 +10,7 @@
 # standard LIS algorithms incapable.
 #
 # Maybe I'm just dumb though.
-module ChapterEleven
+module CTCI::ChapterEleven
   module Seven
     # A circus is designing a tower routine consisting of people standing
     # atop one another's shoulders. For practical and aesthetic reasons,

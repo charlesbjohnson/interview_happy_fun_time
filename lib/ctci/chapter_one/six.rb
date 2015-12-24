@@ -1,4 +1,4 @@
-module ChapterOne
+module CTCI::ChapterOne
   module Six
     # Given an image represented by an NxN matrix, where each pixel in
     # the image is 4 bytes, write a method to rotate the image by 90 degrees

@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterThree
+module CTCI::ChapterThree
   class TestSeven < Minitest::Test
     def setup
       @animal_queue = Seven.new

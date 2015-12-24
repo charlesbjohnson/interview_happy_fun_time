@@ -1,6 +1,6 @@
 # These are so unbelievably hard, I wouldn't be able to come up with this
 # on the spot.
-module ChapterFive
+module CTCI::ChapterFive
   module Seven
     # An array A contains all the integers from 0 to n, except for one
     # number which is missing. In this problem, we cannot access an

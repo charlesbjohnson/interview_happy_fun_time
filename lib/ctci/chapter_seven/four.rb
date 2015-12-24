@@ -1,4 +1,4 @@
-module ChapterSeven
+module CTCI::ChapterSeven
   module Four
     # Write methods to implement the multiply, subtract, and divide
     # operations for integers. Use only the add operator.

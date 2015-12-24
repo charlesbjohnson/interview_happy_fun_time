@@ -1,5 +1,5 @@
 # This one gets me every time
-module ChapterThree
+module CTCI::ChapterThree
   class Four
     # In the classic problem of the Towers of Hanoi, you have 3 towers
     # and N disks of different sizes which can slide onto any tower. The

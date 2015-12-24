@@ -1,6 +1,6 @@
 # Maybe I'm dumb, but this seems a lot simpler than the book's approach
 # and it is still O(N)
-module ChapterFour
+module CTCI::ChapterFour
   module One
     # Implement a function to check if a binary tree is balanced. For
     # the purposes of this question, a balanced tree is defined to be a

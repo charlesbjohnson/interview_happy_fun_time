@@ -1,4 +1,4 @@
-module ChapterThree
+module CTCI::ChapterThree
   class Seven
     # An animal shelter holds only dogs and cats, and operates on a
     # strictly 'first in, first out' basis. People must adopt either

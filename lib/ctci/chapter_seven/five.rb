@@ -1,5 +1,5 @@
 # Another ridiculously length one.
-module ChapterSeven
+module CTCI::ChapterSeven
   module Five
     # Given two squares on a two-dimensional plane, find a line that
     # would cut these two squares in half. Assume that the top and the

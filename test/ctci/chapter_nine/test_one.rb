@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterNine
+module CTCI::ChapterNine
   class TestOne < Minitest::Test
     def test_returns_number_of_ways_to_skip_steps
       assert_equal 1, One.count_ways_to_skip_steps(1)

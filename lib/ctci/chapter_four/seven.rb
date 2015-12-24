@@ -1,4 +1,4 @@
-module ChapterFour
+module CTCI::ChapterFour
   module Seven
     # Design an algorithm and write code to find the first common
     # ancestor of two nods in a binary tree. Avoid storing additional

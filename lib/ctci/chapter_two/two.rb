@@ -1,6 +1,6 @@
 require 'ostruct'
 
-module ChapterTwo
+module CTCI::ChapterTwo
   module Two
     # Implement an algorithm to find the kth to last element
     # of a singly linked list

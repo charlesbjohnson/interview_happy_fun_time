@@ -1,4 +1,4 @@
-module ChapterThree
+module CTCI::ChapterThree
   class Five
     # Implement a MyQueue class which implements a queue using two stacks.
     def initialize

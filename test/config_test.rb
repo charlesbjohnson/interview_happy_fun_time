@@ -1,6 +1,6 @@
-require 'ctci'
 require 'data_structures'
 require 'algorithms'
+require 'ctci'
 
 require 'minitest/autorun'
 require 'minitest/reporters'

@@ -1,4 +1,4 @@
-module ChapterNine
+module CTCI::ChapterNine
   module Four
     # Write a method to return all subsets of a set.
     def subsets_of_set(set)

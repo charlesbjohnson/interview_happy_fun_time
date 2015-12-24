@@ -1,4 +1,4 @@
-module ChapterNine
+module CTCI::ChapterNine
   module Five
     # Write a method to compute all permutations of a string
     def permutations(string)

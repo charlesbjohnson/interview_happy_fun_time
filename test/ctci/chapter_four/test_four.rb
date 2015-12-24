@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterFour
+module CTCI::ChapterFour
   class TestFour < Minitest::Test
     class DataStructures::BinarySearchTreeMap
       include Four

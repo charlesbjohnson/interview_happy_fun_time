@@ -1,4 +1,4 @@
-module ChapterFour
+module CTCI::ChapterFour
   module Six
     # Write an algorithm to find the 'next' node (i.e, in-order successor)
     # of a given node in a binary search tree. You may assume that each

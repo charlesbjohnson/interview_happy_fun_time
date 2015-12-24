@@ -1,3 +1,5 @@
+CTCI::ChapterOne = Module.new
+
 require_relative 'chapter_one/one'
 require_relative 'chapter_one/two'
 require_relative 'chapter_one/three'

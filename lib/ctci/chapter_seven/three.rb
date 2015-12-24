@@ -1,6 +1,6 @@
 # I'm tired of these motha****in' slopes on this motha****kn' Cartesian plane!
 #   - René Descartes
-module ChapterSeven
+module CTCI::ChapterSeven
   module Three
     EPSILON = 0.0001
 

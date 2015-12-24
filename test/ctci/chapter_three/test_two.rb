@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterThree
+module CTCI::ChapterThree
   class TestTwo < Minitest::Test
     def setup
       @stack = Two.new

@@ -1,6 +1,6 @@
 require 'ostruct'
 
-module ChapterTwo
+module CTCI::ChapterTwo
   module Five
     # You have two numbers represented by a linked list,
     # where each node contains a single digit. The digits

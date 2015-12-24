@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterEight
+module CTCI::ChapterEight
   module Two
     describe CallCenter do
       subject { CallCenter.new }

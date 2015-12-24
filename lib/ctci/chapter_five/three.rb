@@ -1,5 +1,5 @@
 # Oh my god... These questions...
-module ChapterFive
+module CTCI::ChapterFive
   module Three
     # Given a positive integer, print the next smallest and the next
     # largest number that have the same number of 1 bits in their

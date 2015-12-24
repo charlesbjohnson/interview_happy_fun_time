@@ -1,5 +1,5 @@
 # Argh.
-module ChapterNine
+module CTCI::ChapterNine
   module Ten
     # You have a stack of n boxes, with widths w1, heights h1, and depths d1.
     # The boxes cannot be rotated and can only be stacked on top of one another

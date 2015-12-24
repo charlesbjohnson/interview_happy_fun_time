@@ -1,7 +1,7 @@
 # Didn't need help from the book, but still ridiculously hard.
 # So many potential off by one errors, this would be a nightmare
 # to try and implement in an interview.
-module ChapterFive
+module CTCI::ChapterFive
   module Eight
     # A monochrome screen is stored as a single array of bytes, allowing
     # eight consecutive pixels to be stored in one byte. The screen has

@@ -1,4 +1,4 @@
-module ChapterFour
+module CTCI::ChapterFour
   module Five
     # Implement a function to check if a binary tree is a binary
     # search tree.

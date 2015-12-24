@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterEight
+module CTCI::ChapterEight
   module One
     describe Deck do
       subject { Deck.new }

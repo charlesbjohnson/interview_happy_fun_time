@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterEight
+module CTCI::ChapterEight
   module Six
     describe JigSaw do
       subject { JigSaw.new }

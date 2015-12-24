@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterFour
+module CTCI::ChapterFour
   class TestTwo < Minitest::Test
     class DataStructures::Graph
       include Two

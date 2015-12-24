@@ -1,6 +1,6 @@
 require 'config_test'
 
-module ChapterThree
+module CTCI::ChapterThree
   class TestFive < Minitest::Test
     def setup
       @queue = Five.new

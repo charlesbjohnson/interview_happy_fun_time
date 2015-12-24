@@ -1,6 +1,6 @@
 # Kind of cheated since I'm taking advantage of Ruby's Array
 # and not the Java kind that the book is aiming for
-module ChapterThree
+module CTCI::ChapterThree
   class One
     # Describe how you could use a single array to implement
     # three stacks.

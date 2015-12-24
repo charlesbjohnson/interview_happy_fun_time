@@ -1,5 +1,5 @@
 # had to look this up. pretty tricky but made sense
-module ChapterTwo
+module CTCI::ChapterTwo
   module Six
     # Given a circular linked list, implement an algorithm
     # which returns the node at the beginning of the loop.

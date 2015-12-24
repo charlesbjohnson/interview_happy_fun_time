@@ -1,4 +1,4 @@
-module ChapterNine
+module CTCI::ChapterNine
   module One
     @cache = [1]
 

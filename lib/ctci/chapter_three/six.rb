@@ -1,4 +1,4 @@
-module ChapterThree
+module CTCI::ChapterThree
   module Six
     # Write a program to sort a stack in ascending order (with biggest
     # items on top). You may use at most one additional stack to hold

@@ -1,5 +1,5 @@
 # Would not have figured this one out.
-module ChapterNine
+module CTCI::ChapterNine
   module Eight
     # Given an infinite number of quarters (25 cents), dimes (10 cents),
     # nickels (5 cents) and pennies (1 cent), write code to calculate the

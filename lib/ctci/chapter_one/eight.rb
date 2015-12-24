@@ -1,4 +1,4 @@
-module ChapterOne
+module CTCI::ChapterOne
   module Eight
     # Assume you have a method isSubstring which checks if one word
     # is a substring of another

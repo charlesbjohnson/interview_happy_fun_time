@@ -1,6 +1,6 @@
 require 'data_structures'
 
-module ChapterThree
+module CTCI::ChapterThree
   class Three
     # Imagine a literal stack of plates. If the stack gets
     # too high, it might topple. Therefore, in real life, we

@@ -1,6 +1,6 @@
 require 'ostruct'
 
-module ChapterTwo
+module CTCI::ChapterTwo
   module Seven
     # Implement a function to check if a linked list is a
     # palindrome.

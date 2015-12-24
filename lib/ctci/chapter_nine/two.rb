@@ -1,7 +1,7 @@
 # Wow and I thought I was being so clever with my rinky dink hash,
 # but apparently binomial coefficient is sufficient for the first part.
 # How disappointing.
-module ChapterNine
+module CTCI::ChapterNine
   module Two
     # Imagine a robot sitting on the upper left corner of an X by Y grid.
     # The robot can only move in two directions: right and down. How many

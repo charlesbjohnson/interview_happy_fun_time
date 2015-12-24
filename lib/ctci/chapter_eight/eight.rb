@@ -1,4 +1,4 @@
-module ChapterEight
+module CTCI::ChapterEight
   module Eight
     # Othello is played as follows: Each Othello piece is white on one side
     # and black on the other. When a piece is surrounded by its opponents on

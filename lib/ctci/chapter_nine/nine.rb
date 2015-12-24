@@ -1,5 +1,5 @@
 # Also had to look this up. Didn't think of using a 1D array.
-module ChapterNine
+module CTCI::ChapterNine
   module Nine
     def queen_placements
       r_queen_placements(0, [], [], 8)

@@ -1,5 +1,5 @@
 # is the book solution wrong for this one?
-module ChapterTwo
+module CTCI::ChapterTwo
   module Four
     # Write code to partition a linked list around a value x,
     # such that all nodes less than x come before all nodes

@@ -1,4 +1,4 @@
-module ChapterFour
+module CTCI::ChapterFour
   module Nine
     # You are given a binary tree in which each node contains a value.
     # Design an algorithm to print all paths which sum to a given value.

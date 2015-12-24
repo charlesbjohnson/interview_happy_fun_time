@@ -1,4 +1,4 @@
-module ChapterOne
+module CTCI::ChapterOne
   module Two
     # Implement a function which reverses a string
     def reverse(s)
