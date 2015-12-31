@@ -30,6 +30,10 @@ describe DataStructures::Stack do
       subject.peek.must_equal(foo)
       subject.size.must_equal(3)
     end
+
+    it 'returns what was pushed' do
+      subject.push(foo).must_equal(foo)
+    end
   end
 
   describe '#peek' do

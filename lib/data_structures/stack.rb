@@ -29,8 +29,8 @@ module DataStructures
     end
 
     def push(data)
-      new = SingleNode.new(data, n: @head)
-      @head = new
+      @head = SingleNode.new(data, n: @head)
+      data
     end
 
     def pop
