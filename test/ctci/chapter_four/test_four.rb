@@ -2,12 +2,12 @@ require 'config_test'
 
 module CTCI::ChapterFour
   class TestFour < Minitest::Test
-    class DataStructures::BinarySearchTreeMap
+    BinarySearchTreeMap = DataStructures::BinarySearchTreeMap.dup.class_exec do
       include Four
     end
 
     def setup
-      @tree = DataStructures::BinarySearchTreeMap.new
+      @tree = BinarySearchTreeMap.new
     end
 
     def test_returns_depth_lists_for_each_depth

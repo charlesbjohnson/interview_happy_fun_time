@@ -2,12 +2,12 @@ require 'config_test'
 
 module CTCI::ChapterFour
   class TestOne < Minitest::Test
-    class DataStructures::BinarySearchTreeMap
+    BinarySearchTreeMap = DataStructures::BinarySearchTreeMap.dup.class_exec do
       include One
     end
 
     def setup
-      @tree = DataStructures::BinarySearchTreeMap.new
+      @tree = BinarySearchTreeMap.new
     end
 
     def test_returns_true_if_tree_is_balanced

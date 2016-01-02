@@ -2,12 +2,12 @@ require 'config_test'
 
 module CTCI::ChapterTwo
   class TestSeven < Minitest::Test
-    class DataStructures::LinkedList
+    LinkedList = DataStructures::LinkedList.dup.class_exec do
       include Seven
     end
 
     def setup
-      @list = DataStructures::LinkedList.new
+      @list = LinkedList.new
     end
 
     def test_palindrome_true

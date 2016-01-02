@@ -2,12 +2,12 @@ require 'config_test'
 
 module CTCI::ChapterTwo
   class TestTwo < Minitest::Test
-    class DataStructures::LinkedList
+    LinkedList = DataStructures::LinkedList.dup.class_exec do
       include Two
     end
 
     def setup
-      @list = DataStructures::LinkedList.new
+      @list = LinkedList.new
     end
 
     def test_from_last

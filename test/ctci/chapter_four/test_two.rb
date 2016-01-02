@@ -2,12 +2,12 @@ require 'config_test'
 
 module CTCI::ChapterFour
   class TestTwo < Minitest::Test
-    class DataStructures::Graph
+    Graph = DataStructures::Graph.dup.class_exec do
       include Two
     end
 
     def setup
-      @graph = DataStructures::Graph.new
+      @graph = Graph.new
     end
 
     def test_returns_true_if_connected

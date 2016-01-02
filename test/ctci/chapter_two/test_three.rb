@@ -2,12 +2,12 @@ require 'config_test'
 
 module CTCI::ChapterTwo
   class TestThree < Minitest::Test
-    class DataStructures::LinkedList
+    LinkedList = DataStructures::LinkedList.dup.class_exec do
       include Three
     end
 
     def setup
-      @list = DataStructures::LinkedList.new
+      @list = LinkedList.new
       3.times { |n| @list.append(n) } # 0,1,2
     end
 

@@ -2,13 +2,13 @@ require 'config_test'
 
 module CTCI::ChapterTwo
   class TestSix < Minitest::Test
-    class DataStructures::LinkedList
+    LinkedList = DataStructures::LinkedList.dup.class_exec do
       include Six
     end
 
     def setup
-      @list = DataStructures::LinkedList.new
-      @loop = DataStructures::LinkedList.new
+      @list = LinkedList.new
+      @loop = LinkedList.new
     end
 
     def test_find_loop

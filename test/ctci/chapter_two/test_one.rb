@@ -2,12 +2,12 @@ require 'config_test'
 
 module CTCI::ChapterTwo
   class TestOne < Minitest::Test
-    class DataStructures::LinkedList
+    LinkedList = DataStructures::LinkedList.dup.class_exec do
       include One
     end
 
     def setup
-      @list = DataStructures::LinkedList.new
+      @list = LinkedList.new
       2.upto(4) { |n| @list.append(n) } # 2,3,4
     end
 
@@ -32,7 +32,7 @@ module CTCI::ChapterTwo
     end
 
     def test_does_nothing_on_empty
-      list = DataStructures::LinkedList.new
+      list = LinkedList.new
       list.remove_dup!
       assert_equal(0, list.size)
       assert_equal(nil, list[0])

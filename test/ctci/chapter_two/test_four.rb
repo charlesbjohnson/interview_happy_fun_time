@@ -2,12 +2,12 @@ require 'config_test'
 
 module CTCI::ChapterTwo
   class TestFour < Minitest::Test
-    class DataStructures::LinkedList
+    LinkedList = DataStructures::LinkedList.dup.class_exec do
       include Four
     end
 
     def setup
-      @list = DataStructures::LinkedList.new
+      @list = LinkedList.new
       (1..5).to_a.shuffle!.each { |n| @list.append(n) }
     end
 
@@ -40,7 +40,7 @@ module CTCI::ChapterTwo
     end
 
     def test_partition_around_grouped_duplicates
-      @list = DataStructures::LinkedList.new
+      @list = LinkedList.new
       [2, 1].each { |n| @list.append(n) }
       2.times { @list.append(3) }
       [4, 3, 5].each { |n| @list.append(n) }
@@ -51,7 +51,7 @@ module CTCI::ChapterTwo
     end
 
     def test_partion_around_sorted
-      @list = DataStructures::LinkedList.new
+      @list = LinkedList.new
       expected = [1, 2, 3, 4, 5]
       expected.each { |n| @list.append(n) }
 
@@ -69,7 +69,7 @@ module CTCI::ChapterTwo
     end
 
     def test_partition_around_single
-      @list = DataStructures::LinkedList.new
+      @list = LinkedList.new
       @list.append(3)
 
       @list.partition_around!(3)
