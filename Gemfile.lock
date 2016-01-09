@@ -97,6 +97,7 @@ DEPENDENCIES
   pry-inline
   pry-stack_explorer
   rake
+  rubocop
 
 BUNDLED WITH
    1.11.2

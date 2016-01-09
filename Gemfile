@@ -11,6 +11,8 @@ gem 'pry-byebug'
 gem 'pry-stack_explorer'
 gem 'pry-inline'
 
+gem 'rubocop'
+
 gem 'guard'
 gem 'guard-minitest'
 gem 'guard-rubocop'
